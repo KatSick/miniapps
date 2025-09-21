@@ -1,0 +1,39 @@
+fileGroups:
+  sources:
+    - 'src/**/*'
+    - 'types/**/*'
+    - 'public/**/*'
+    - 'package.json'
+  tests:
+    - 'tests/**/*.test.*'
+    - '**/__tests__/**/*'
+  vite:
+    - index.html
+    - vite.config.ts
+  typescript:
+    - tsconfig.*.json
+    - tsconfig.json
+    - /tsconfig.json
+    - /tsconfig.*.json
+  biome:
+    - "biome.json"
+    - "/biome.json"
+
+tasks:
+  lint:
+    command: "bun --bun biome check src package.json"
+    inputs:
+      - '@group(sources)'
+      - '@group(biome)'
+  fmt:
+    command: "bun --bun biome check --write src"
+    inputs:
+      - '@group(sources)'
+      - '@group(biome)'
+  types:
+    command: "bun --bun tsgo"
+    inputs:
+      - '@group(sources)'
+      - '@group(typescript)'
+
+  

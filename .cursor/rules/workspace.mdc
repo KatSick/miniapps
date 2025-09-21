@@ -1,0 +1,8 @@
+---
+description: how to run commands in workspace
+globs: **/*
+alwaysApply: true
+---
+
+- always use `moon run :lint :types --affected` to verify changes you made
+- if needed, use moon mcp server to help you

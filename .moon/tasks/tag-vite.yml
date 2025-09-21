@@ -1,0 +1,25 @@
+tasks:
+  build:
+    command: "bun --bun vite build"
+    inputs:
+      - "@group(vite)"
+      - "@group(sources)"
+    outputs:
+      - "dist"
+    deps:
+      - 'lint'
+      - 'types'
+  dev:
+    command: 'bun --bun vite dev'
+    local: true
+  e2e:
+    command: 'bun --bun vitest --config=vitest.browser.config.ts'
+    inputs:
+      - '@group(vite)'
+      - '@group(sources)'
+      - '@group(tests)'
+    outputs:
+      # - 'coverage'
+    deps:
+      - 'lint'
+      - 'types'

@@ -1,0 +1,2 @@
+- [ ] moon project sync. ensure it is working
+- [ ] deployment of fe. caddy with index.html and assets separate

@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "biomejs.biome",
+    "fractalbrew.backticks",
+    "typescriptteam.native-preview",
+    "moonrepo.moon-console"
+  ]
+}

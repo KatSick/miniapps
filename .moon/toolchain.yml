@@ -7,5 +7,7 @@ unstable_javascript:
 unstable_bun:
   installArgs: ['--frozen-lockfile']
 
+unstable_node: {}
+
 typescript:
   syncProjectReferences: true

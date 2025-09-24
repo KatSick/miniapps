@@ -107,3 +107,7 @@ vite.config.ts.timestamp-*
 # moon
 .moon/cache
 .moon/docker
+
+# playwright
+playwright-report
+test-results

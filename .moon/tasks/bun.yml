@@ -7,6 +7,8 @@ fileGroups:
   tests:
     - 'tests/**/*.test.*'
     - '**/__tests__/**/*'
+  e2e:
+    - 'e2e-tests/**/*'
   vite:
     - index.html
     - vite.config.ts
@@ -25,15 +27,19 @@ tasks:
     inputs:
       - '@group(sources)'
       - '@group(biome)'
+    toolchain: 'bun'
+  
   fmt:
     command: "bun --bun biome check --write src"
     inputs:
       - '@group(sources)'
       - '@group(biome)'
+    toolchain: 'bun'
+
   types:
     command: "bun --bun tsgo"
     inputs:
       - '@group(sources)'
       - '@group(typescript)'
-
+    toolchain: 'bun'
   

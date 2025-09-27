@@ -13,5 +13,4 @@ vcs:
   syncHooks: true
   hooks:
     pre-commit:
-      - 'moon ci'
-      # - 'moon run :lint :types --affected --status=staged'
+      - 'moon run :lint :types :build :test --affected --status=staged'

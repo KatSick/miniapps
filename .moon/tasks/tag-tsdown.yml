@@ -10,8 +10,8 @@ tasks:
       - 'lint'
       - 'types'
   
-  dev:
-    command: 'tsdown --watch'
+  watch:
+    command: 'tsdown --watch  --no-clean'
     local: true
   
   test:

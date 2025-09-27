@@ -16,9 +16,9 @@ tasks:
     local: true
     deps:
       - '^:build'
-      - '^:dev'
+      - '^:watch'
 
-  e2e:
+  test:
     command: 
     - 'vitest'
     - 'run'

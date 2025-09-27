@@ -7,7 +7,6 @@
   "devDependencies": {
     "@biomejs/biome": "catalog:",
     "@playwright/test": "catalog:",
-    "@vitejs/plugin-react": "catalog:",
     "globals": "catalog:",
     "playwright": "catalog:",
     "typescript": "catalog:",

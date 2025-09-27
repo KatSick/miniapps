@@ -13,8 +13,10 @@
     "@vitest/browser": "catalog:",
     "globals": "catalog:",
     "playwright": "catalog:",
+    "tsdown": "catalog:",
     "typescript": "catalog:",
-    "vite": "npm:rolldown-vite@^7.1.13",
+    "vite": "catalog:",
+    "vite-tsconfig-paths": "catalog:",
     "vitest": "catalog:",
     "vitest-browser-react": "catalog:"
   },

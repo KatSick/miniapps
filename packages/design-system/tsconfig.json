@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.options.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "noEmit": false,
+    "outDir": "../../.moon/cache/types/packages/design-system"
+  },
+  "include": ["src", "tests"]
+}

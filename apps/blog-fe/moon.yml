@@ -1,3 +1,6 @@
 language: 'typescript'
 type: 'application'
 tags: ['vite']
+
+dependsOn:
+  - design-system

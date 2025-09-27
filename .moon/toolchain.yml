@@ -3,11 +3,14 @@ $schema: 'https://moonrepo.dev/schemas/toolchain.json'
 unstable_javascript:
   packageManager: "pnpm"
   dedupeOnLockfileChange: false
+  syncProjectWorkspaceDependencies: true
 
 unstable_node: {}
 
-unstable_pnpm: 
-  installArgs: ['--frozen-lockfile']
+unstable_pnpm: {}
 
 typescript:
   syncProjectReferences: true
+  routeOutDirToCache: true
+
+  

@@ -1,3 +1,4 @@
+import { MyButton } from "@miniapps/design-system";
 import { useState } from "react";
 import viteLogo from "/vite.svg";
 import reactLogo from "./assets/react.svg";
@@ -25,13 +26,7 @@ export const App: React.FC = () => {
       </div>
       <h1 className="text-4xl font-bold text-gray-800 mb-8">Vite + React</h1>
       <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-        <button
-          type="button"
-          onClick={() => setCount((count) => count + 1)}
-          className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 mb-4"
-        >
-          count is {count}
-        </button>
+        <MyButton onClick={() => setCount((count) => count + 1)}>count is {count}</MyButton>
         <p className="text-gray-600">
           Edit <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono">src/App.tsx</code>{" "}
           and save to test HMR

@@ -4,7 +4,13 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "outDir": "../../.moon/cache/types/apps/blog-fe"
   },
-  "include": ["src", "vitest-example"]
+  "include": ["src", "tests"],
+  "references": [
+    {
+      "path": "../../packages/design-system"
+    }
+  ]
 }

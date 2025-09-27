@@ -12,6 +12,8 @@ fileGroups:
   vite:
     - index.html
     - vite.config.ts
+  tsdown:
+    - tsdown.config.ts
   typescript:
     - tsconfig.*.json
     - tsconfig.json
@@ -29,7 +31,7 @@ tasks:
       - '@group(biome)'
   
   fmt:
-    command: "biome check --write src"
+    command: "biome check --write src tsconfig.json"
     inputs:
       - '@group(sources)'
       - '@group(biome)'

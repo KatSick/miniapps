@@ -1,24 +1,20 @@
 tasks:
   build:
-    command: "vite build"
+    command: "tsdown"
     inputs:
-      - "@group(vite)"
+      - "@group(tsdown)"
       - "@group(sources)"
     outputs:
       - "dist"
     deps:
       - 'lint'
       - 'types'
-      - '^:build'
-
+  
   dev:
-    command: 'vite dev'
+    command: 'tsdown --watch'
     local: true
-    deps:
-      - '^:build'
-      - '^:dev'
-
-  e2e:
+  
+  test:
     command: 
     - 'vitest'
     - 'run'
@@ -26,12 +22,11 @@ tasks:
     - '@in(0)'
     
     inputs:
-      - vitest.browser.config.ts
+      - vitest.config.ts
       - '@group(sources)'
-      - '@group(e2e)'
+      - '@group(tests)'
     outputs:
       # - 'coverage'
     deps:
       - 'lint'
       - 'types'
-      - '^:build'

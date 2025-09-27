@@ -4,6 +4,7 @@
     "fractalbrew.backticks",
     "moonrepo.moon-console",
     "vitest.explorer",
-    "bradlc.vscode-tailwindcss"
+    "bradlc.vscode-tailwindcss",
+    "editorconfig.editorconfig"
   ]
 }

@@ -3,6 +3,7 @@
     "biomejs.biome",
     "fractalbrew.backticks",
     "moonrepo.moon-console",
-    "vitest.explorer"
+    "vitest.explorer",
+    "bradlc.vscode-tailwindcss"
   ]
 }

@@ -7,13 +7,17 @@
   "devDependencies": {
     "@biomejs/biome": "catalog:",
     "@playwright/test": "catalog:",
+    "@vitest/browser": "catalog:",
     "globals": "catalog:",
     "playwright": "catalog:",
     "typescript": "catalog:",
     "vite": "npm:rolldown-vite@^7.1.13",
     "vitest": "catalog:",
-    "@vitest/browser": "catalog:",
     "vitest-browser-react": "catalog:"
   },
-  "packageManager": "pnpm@10.17.1"
+  "packageManager": "pnpm@10.17.1",
+  "dependencies": {
+    "@tailwindcss/vite": "catalog:",
+    "tailwindcss": "catalog:"
+  }
 }

@@ -10,9 +10,12 @@
   "devDependencies": {
     "@biomejs/biome": "catalog:",
     "@playwright/test": "catalog:",
+    "@storybook/react-vite": "catalog:",
+    "@tailwindcss/vite": "catalog:",
     "@vitest/browser": "catalog:",
     "globals": "catalog:",
     "playwright": "catalog:",
+    "storybook": "catalog:",
     "tsdown": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
@@ -20,9 +23,5 @@
     "vitest": "catalog:",
     "vitest-browser-react": "catalog:"
   },
-  "packageManager": "pnpm@10.17.1",
-  "dependencies": {
-    "@tailwindcss/vite": "catalog:",
-    "tailwindcss": "catalog:"
-  }
+  "packageManager": "pnpm@10.17.1"
 }

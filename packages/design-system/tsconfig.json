@@ -8,5 +8,5 @@
     "noEmit": false,
     "outDir": "../../.moon/cache/types/packages/design-system"
   },
-  "include": ["src", "tests"]
+  "include": ["src", "tests", ".storybook"]
 }

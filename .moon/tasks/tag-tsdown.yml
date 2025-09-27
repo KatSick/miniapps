@@ -13,6 +13,10 @@ tasks:
   watch:
     command: 'tsdown --watch  --no-clean'
     local: true
+
+  storybook:
+    command: 'storybook dev -p 6006'
+    local: true
   
   test:
     command: 

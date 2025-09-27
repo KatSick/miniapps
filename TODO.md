@@ -1,2 +1,4 @@
-- [ ] moon project sync. ensure it is working
+- [x] moon project sync. ensure it is working
+- [ ] fix tailwind.css file re-usage. should be from design system? also deps itself
+- [ ] do we really need storybook? if yes, should we run tests via storybook?
 - [ ] deployment of fe. caddy with index.html and assets separate

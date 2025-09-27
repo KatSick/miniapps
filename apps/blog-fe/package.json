@@ -8,9 +8,5 @@
     "@types/react-dom": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:"
-  },
-  "scripts": {
-    "test:browser": "vitest --config=vitest.browser.config.ts"
-  },
-  "packageManager": "pnpm@10.17.1"
+  }
 }

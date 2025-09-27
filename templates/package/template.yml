@@ -1,0 +1,11 @@
+title: 'package'
+destination: 'packages/[name]'
+description: |
+  Scaffolds the initial structure for an npm package,
+  including source and test folders, a package.json, and more.
+variables:
+  name:
+    type: 'string'
+    default: ''
+    required: true
+    prompt: 'Package name?'

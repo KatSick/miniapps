@@ -1,6 +1,6 @@
 tasks:
   build:
-    command: "bun --bun vite build"
+    command: "vite build"
     inputs:
       - "@group(vite)"
       - "@group(sources)"
@@ -9,15 +9,13 @@ tasks:
     deps:
       - 'lint'
       - 'types'
-    toolchain: 'bun'
   
   dev:
-    command: 'bun --bun vite dev'
+    command: 'vite dev'
     local: true
-    toolchain: 'bun'
   
   e2e:
-    command: 'bun playwright test --project=chromium'
+    command: 'playwright test --project=chromium'
     inputs:
       - '@group(sources)'
       - '@group(e2e)'
@@ -26,4 +24,3 @@ tasks:
     deps:
       - 'lint'
       - 'types'
-    toolchain: 'node'

@@ -1,13 +1,11 @@
 $schema: 'https://moonrepo.dev/schemas/toolchain.json'
 
 unstable_javascript:
-  packageManager: "bun"
-  rootPackageDependenciesOnly: true
-
-unstable_bun:
-  installArgs: ['--frozen-lockfile']
+  packageManager: "pnpm"
 
 unstable_node: {}
+
+unstable_pnpm: {}
 
 typescript:
   syncProjectReferences: true

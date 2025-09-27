@@ -4,26 +4,16 @@
     "packages/**/*",
     "apps/**/*"
   ],
-  "scripts": {
-    "postinstall": "playwright install chromium"
-  },
-  "dependencies": {
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
-  },
   "devDependencies": {
-    "@biomejs/biome": "2.2.4",
-    "@playwright/test": "^1.55.0",
-    "@types/bun": "latest",
-    "@types/react": "^19.1.13",
-    "@types/react-dom": "^19.1.9",
-    "@typescript/native-preview": "^7.0.0-dev.20250921.1",
-    "@vitejs/plugin-react": "^5.0.3",
-    "globals": "^16.4.0",
-    "vite": "^7.1.6",
-    "playwright": "^1.55.0"
+    "@biomejs/biome": "catalog:",
+    "@playwright/test": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "globals": "catalog:",
+    "playwright": "catalog:",
+    "vite": "npm:rolldown-vite@^7.1.13"
   },
-  "overrides": {
-    "vite": "npm:rolldown-vite@latest"
+  "packageManager": "pnpm@10.17.1",
+  "dependencies": {
+    "typescript": "catalog:"
   }
 }

@@ -23,23 +23,20 @@ fileGroups:
 
 tasks:
   lint:
-    command: "bun --bun biome check src package.json"
+    command: "biome check src package.json"
     inputs:
       - '@group(sources)'
       - '@group(biome)'
-    toolchain: 'bun'
   
   fmt:
-    command: "bun --bun biome check --write src"
+    command: "biome check --write src"
     inputs:
       - '@group(sources)'
       - '@group(biome)'
-    toolchain: 'bun'
 
   types:
-    command: "bun --bun tsgo"
+    command: "tsc --noEmit"
     inputs:
       - '@group(sources)'
       - '@group(typescript)'
-    toolchain: 'bun'
   

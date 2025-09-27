@@ -7,7 +7,6 @@
     "source.organizeImports.biome": "explicit"
   },
 
-  "typescript.experimental.useTsgo": true,
   "typescript.tsdk": "node_modules/typescript/lib",
 
   "[javascript]": {

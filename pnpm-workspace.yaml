@@ -8,22 +8,37 @@ catalog:
   '@types/react': 19.1.14
   '@types/react-dom': 19.1.9
   '@vitejs/plugin-react': 5.0.3
+  '@vitest/browser': ^3.2.4
   globals: 16.4.0
   playwright: 1.55.1
   react: 19.1.1
   react-dom: 19.1.1
   typescript: ^5.9.2
+  vitest: ^3.2.4
+  vitest-browser-react: ^1.0.1
 
 catalogMode: strict
 
 cleanupUnusedCatalogs: true
 
+gitBranchLockfile: true
+
 ignoredBuiltDependencies:
   - esbuild
 
+mergeGitBranchLockfilesBranchPattern:
+  - main
+
 overrides:
+  '@biomejs/biome': 'catalog:'
+  '@playwright/test': 'catalog:'
   '@types/react': 'catalog:'
   '@types/react-dom': 'catalog:'
+  '@vitejs/plugin-react': 'catalog:'
+  globals: 'catalog:'
+  playwright: 'catalog:'
   react: 'catalog:'
   react-dom: 'catalog:'
+  typescript: 'catalog:'
   vite: npm:rolldown-vite@latest
+  vitest: 'catalog:'

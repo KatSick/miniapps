@@ -1,5 +1,5 @@
 {
   "extends": "../../tsconfig.options.json",
   "compilerOptions": {},
-  "include": ["src"]
+  "include": ["src", "vitest-example"]
 }

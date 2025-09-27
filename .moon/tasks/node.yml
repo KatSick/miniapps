@@ -33,6 +33,8 @@ tasks:
     inputs:
       - '@group(sources)'
       - '@group(biome)'
+    local: true
+
 
   types:
     command: "tsc --noEmit"

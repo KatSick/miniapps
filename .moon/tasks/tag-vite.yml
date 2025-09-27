@@ -15,8 +15,14 @@ tasks:
     local: true
   
   e2e:
-    command: 'playwright test --project=chromium'
+    command: 
+    - 'vitest'
+    - 'run'
+    - '--config'
+    - '@in(0)'
+    
     inputs:
+      - vitest.browser.config.ts
       - '@group(sources)'
       - '@group(e2e)'
     outputs:

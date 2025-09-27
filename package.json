@@ -10,10 +10,11 @@
     "@vitejs/plugin-react": "catalog:",
     "globals": "catalog:",
     "playwright": "catalog:",
-    "vite": "npm:rolldown-vite@^7.1.13"
+    "typescript": "catalog:",
+    "vite": "npm:rolldown-vite@^7.1.13",
+    "vitest": "catalog:",
+    "@vitest/browser": "catalog:",
+    "vitest-browser-react": "catalog:"
   },
-  "packageManager": "pnpm@10.17.1",
-  "dependencies": {
-    "typescript": "catalog:"
-  }
+  "packageManager": "pnpm@10.17.1"
 }

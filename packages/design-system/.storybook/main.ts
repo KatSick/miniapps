@@ -6,6 +6,10 @@ const config: StorybookConfig = {
   stories: ["../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [],
   framework: "@storybook/react-vite",
+  core: {
+    disableTelemetry: true,
+    disableWhatsNewNotifications: true,
+  },
   async viteFinal(config) {
     const { mergeConfig } = await import("vite");
 

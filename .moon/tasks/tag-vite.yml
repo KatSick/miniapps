@@ -35,3 +35,9 @@ tasks:
       - 'lint'
       - 'types'
       - '^:build'
+  
+  test.watch:
+    extends: test
+    args: 
+      - '--watch'
+    local: true

@@ -5,6 +5,8 @@
     "moonrepo.moon-console",
     "vitest.explorer",
     "bradlc.vscode-tailwindcss",
-    "editorconfig.editorconfig"
+    "editorconfig.editorconfig",
+    "github.vscode-github-actions",
+    "github.vscode-pull-request-github"
   ]
 }

@@ -30,7 +30,7 @@
   "peerDependencies": {
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
-    "react": "catalog:",
+    "react": "19.x",
     "react-dom": "catalog:",
     "tailwindcss": "catalog:"
   },

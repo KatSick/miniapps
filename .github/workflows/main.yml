@@ -16,9 +16,6 @@ jobs:
         with:
           auto-install: true
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-
       - run: "moon ci"
 
       - name: "Collect/retrospect on results"

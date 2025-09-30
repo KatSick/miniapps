@@ -14,3 +14,11 @@ vcs:
   hooks:
     pre-commit:
       - 'moon run :lint :types :build :test --affected --status=staged'
+
+# unstable_remote:
+#   host: 'grpcs://remote.buildbuddy.io'
+#   cache:
+#     compression: 'zstd'
+#   auth:
+#     headers:
+#       'x-buildbuddy-api-key': '$BUILDBUDDY_API_KEY'

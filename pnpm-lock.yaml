@@ -45,7 +45,7 @@ catalogs:
 
 overrides:
   '@biomejs/biome': 2.2.4
-  '@storybook/react-vite': 10.0.0-beta.7
+  '@storybook/react-vite': 10.0.0-beta.10
   '@types/react': 19.1.14
   '@types/react-dom': 19.1.9
   globals: 16.4.0
@@ -65,8 +65,8 @@ importers:
         specifier: 2.2.4
         version: 2.2.4
       '@storybook/react-vite':
-        specifier: 10.0.0-beta.7
-        version: 10.0.0-beta.7(esbuild@0.25.10)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0))(storybook@10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0)))(typescript@5.9.2)
+        specifier: 10.0.0-beta.10
+        version: 10.0.0-beta.10(esbuild@0.25.10)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0))(storybook@10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0)))(typescript@5.9.2)
       '@tailwindcss/vite':
         specifier: 'catalog:'
         version: 4.1.13(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0))
@@ -722,14 +722,14 @@ packages:
       rollup:
         optional: true
 
-  '@storybook/builder-vite@10.0.0-beta.7':
-    resolution: {integrity: sha512-Bo7HKAuwSVfz3VRmlAPRwT7us7LPeXj2aJ5Mh4qmTHYpctEXDJufoXAAtXV1oMS/I512k/S2XlX6djbNpoFSlw==}
+  '@storybook/builder-vite@10.0.0-beta.10':
+    resolution: {integrity: sha512-Lr/nVrkZLzMBs1CIvIc0ddr2UyWRmqnoYalBLUKraGZUCOfCzpJ3ywzfj3lMhfOR4456Lld0X9SFd04DQFHDnQ==}
     peerDependencies:
       storybook: 10.0.0-beta.7
       vite: ^5.0.0 || ^6.0.0 || ^7.0.0
 
-  '@storybook/csf-plugin@10.0.0-beta.7':
-    resolution: {integrity: sha512-1nkH+vriwFbwqeCItJE2mUfw3vYECgDrwBWlSpKenVrgTNjU6KnbHLrYlLUmSivabtXAhl/3NH3XlxNjaCpFfA==}
+  '@storybook/csf-plugin@10.0.0-beta.10':
+    resolution: {integrity: sha512-sKCnWOHU97799zj6RoZuFygJCKPPUmohYZsESPddWQm6tHckjmKp1k4ISvd7Z5MIBwiEPYCnppQDDH1mOG6SPw==}
     peerDependencies:
       esbuild: '*'
       rollup: '*'
@@ -756,23 +756,23 @@ packages:
       react: 19.1.1
       react-dom: 19.1.1
 
-  '@storybook/react-dom-shim@10.0.0-beta.7':
-    resolution: {integrity: sha512-D6fHsS3CzVTPercw60nbAlFM9SUv0Oi6rO45kIWeufD5bSuzskpqivCX6xmqNsfCz+LEtTPJ5URu+hMEYEC70A==}
+  '@storybook/react-dom-shim@10.0.0-beta.10':
+    resolution: {integrity: sha512-FAniZfMgSfJzC6/0k2QhEkCOG2k1zH7+Xr9/S6aeI82pYHKrtMQm8qS8D+YguAHXQwQL3lE46JstN7pU9ujamQ==}
     peerDependencies:
       react: 19.1.1
       react-dom: 19.1.1
       storybook: 10.0.0-beta.7
 
-  '@storybook/react-vite@10.0.0-beta.7':
-    resolution: {integrity: sha512-7b8iTk/vwsYDAkyMXQZu6CVUpG3mQ6flTOa03FJ8W8DkMSGy1SAM0IAXGo2edx4TpdCPBXastH3Pim/e3+64sw==}
+  '@storybook/react-vite@10.0.0-beta.10':
+    resolution: {integrity: sha512-yuWtxyjSVc4ZmNiy80RBpJt9aneuYQfaLIJyoMooeUmiiJWPQPV3yMcl3u/545pt5vPUNGIt4pzEpujhdV6IJA==}
     peerDependencies:
       react: 19.1.1
       react-dom: 19.1.1
       storybook: 10.0.0-beta.7
       vite: ^5.0.0 || ^6.0.0 || ^7.0.0
 
-  '@storybook/react@10.0.0-beta.7':
-    resolution: {integrity: sha512-ubUfd6qsA3jVaMuAY8aj/LXF8Z67rSRd+8ZENvMWwvF99KKyFv8D390oR7YBTCLsehYFd6SGPYTekXvO6xVK8Q==}
+  '@storybook/react@10.0.0-beta.10':
+    resolution: {integrity: sha512-v90AmKw/7wQEC+AF2z7CaGasiBgSKyiy0V6Rxx97+o0krpS9Oc3wXuU+YoDLZzgFDsmvSPliL0GE8NVyv4IYGQ==}
     peerDependencies:
       react: 19.1.1
       react-dom: 19.1.1
@@ -2334,9 +2334,9 @@ snapshots:
       estree-walker: 2.0.2
       picomatch: 4.0.3
 
-  '@storybook/builder-vite@10.0.0-beta.7(esbuild@0.25.10)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0))(storybook@10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0)))':
+  '@storybook/builder-vite@10.0.0-beta.10(esbuild@0.25.10)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0))(storybook@10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0)))':
     dependencies:
-      '@storybook/csf-plugin': 10.0.0-beta.7(esbuild@0.25.10)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0))(storybook@10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0)))
+      '@storybook/csf-plugin': 10.0.0-beta.10(esbuild@0.25.10)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0))(storybook@10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0)))
       storybook: 10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0))
       ts-dedent: 2.2.0
       vite: rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0)
@@ -2345,7 +2345,7 @@ snapshots:
       - rollup
       - webpack
 
-  '@storybook/csf-plugin@10.0.0-beta.7(esbuild@0.25.10)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0))(storybook@10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0)))':
+  '@storybook/csf-plugin@10.0.0-beta.10(esbuild@0.25.10)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0))(storybook@10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0)))':
     dependencies:
       storybook: 10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0))
       unplugin: 2.3.10
@@ -2360,18 +2360,18 @@ snapshots:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
 
-  '@storybook/react-dom-shim@10.0.0-beta.7(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(storybook@10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0)))':
+  '@storybook/react-dom-shim@10.0.0-beta.10(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(storybook@10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0)))':
     dependencies:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
       storybook: 10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0))
 
-  '@storybook/react-vite@10.0.0-beta.7(esbuild@0.25.10)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0))(storybook@10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0)))(typescript@5.9.2)':
+  '@storybook/react-vite@10.0.0-beta.10(esbuild@0.25.10)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0))(storybook@10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0)))(typescript@5.9.2)':
     dependencies:
       '@joshwooding/vite-plugin-react-docgen-typescript': 0.6.1(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0))(typescript@5.9.2)
       '@rollup/pluginutils': 5.3.0
-      '@storybook/builder-vite': 10.0.0-beta.7(esbuild@0.25.10)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0))(storybook@10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0)))
-      '@storybook/react': 10.0.0-beta.7(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(storybook@10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0)))(typescript@5.9.2)
+      '@storybook/builder-vite': 10.0.0-beta.10(esbuild@0.25.10)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0))(storybook@10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0)))
+      '@storybook/react': 10.0.0-beta.10(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(storybook@10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0)))(typescript@5.9.2)
       empathic: 2.0.0
       magic-string: 0.30.19
       react: 19.1.1
@@ -2388,10 +2388,10 @@ snapshots:
       - typescript
       - webpack
 
-  '@storybook/react@10.0.0-beta.7(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(storybook@10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0)))(typescript@5.9.2)':
+  '@storybook/react@10.0.0-beta.10(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(storybook@10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0)))(typescript@5.9.2)':
     dependencies:
       '@storybook/global': 5.0.0
-      '@storybook/react-dom-shim': 10.0.0-beta.7(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(storybook@10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0)))
+      '@storybook/react-dom-shim': 10.0.0-beta.10(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(storybook@10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0)))
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
       storybook: 10.0.0-beta.7(@testing-library/dom@10.4.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(rolldown-vite@7.1.16(@types/node@24.5.2)(esbuild@0.25.10)(jiti@2.6.0))

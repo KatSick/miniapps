@@ -51,5 +51,5 @@ overrides:
   react-dom: 'catalog:'
   storybook: 'catalog:'
   typescript: 'catalog:'
-  vite: npm:rolldown-vite@latest
+  vite: npm:rolldown-vite@7.1.16
   vitest: 'catalog:'

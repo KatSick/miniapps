@@ -37,6 +37,8 @@ ignoredBuiltDependencies:
   - '@tailwindcss/oxide'
   - esbuild
 
+dedupeDirectDeps: true
+
 mergeGitBranchLockfilesBranchPattern:
   - main
 

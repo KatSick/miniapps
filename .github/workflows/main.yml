@@ -31,6 +31,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - run: "MOON_REMOTE_HOST=grpcs://remote.buildbuddy.io BUILDBUDDY_API_KEY=${{secrets.BUILDBUDDY_API_KEY}} moon ci"
+      - run: "pnpm dedupe --check"
 
       - name: "Collect/retrospect on results"
         uses: "appthrust/moon-ci-retrospect@v2"

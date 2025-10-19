@@ -1,0 +1,22 @@
+fileGroups:
+  configs:
+    - "*.{yaml,yml,json,md}"
+    - "{templates|.vscode|.moon|.github|.cursor}/**/*.{yaml,yml,json.md}"
+
+tasks:
+  lint:
+    script: "exit 0"
+
+  lint.fix:
+    script: "exit 0"
+
+  fmt:
+    command: "prettier --ignore-unknown --check @in(0)"
+    inputs:
+      - group: configs
+
+  fmt.fix:
+    command: "prettier --ignore-unknown --write @in(0)"
+    local: true
+    inputs:
+      - group: configs

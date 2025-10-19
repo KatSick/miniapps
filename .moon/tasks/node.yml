@@ -5,16 +5,18 @@ implicitInputs:
   - /pnpm-workspace.yaml
 
 fileGroups:
+  files:
+    - "**/*"
   sources:
-    - 'src/**/*'
-    - 'types/**/*'
-    - 'public/**/*'
-    - 'package.json'
+    - "src/**/*"
+    - "types/**/*"
+    - "public/**/*"
+    - "package.json"
   tests:
-    - 'tests/**/*.test.*'
-    - '**/__tests__/**/*'
+    - "tests/**/*.test.*"
+    - "**/__tests__/**/*"
   e2e:
-    - 'e2e-tests/**/*'
+    - "e2e-tests/**/*"
   vite:
     - index.html
     - vite.config.ts
@@ -25,30 +27,28 @@ fileGroups:
     - tsconfig.json
     - /tsconfig.json
     - /tsconfig.*.json
-  biome:
-    - "biome.json"
-    - "/biome.json"
+  prettier:
+    - "/.prettierrc.json"
 
 tasks:
   lint:
-    command: "biome check src package.json"
-    inputs:
-      - '@group(sources)'
-      - '@group(biome)'
-  
-  fmt:
-    command: "biome check --write src tsconfig.json"
-    inputs:
-      - '@group(sources)'
-      - '@group(biome)'
+    command: "oxlint --type-aware"
+
+  lint.fix:
+    command: "oxlint --type-aware --fix --fix-dangerously"
     local: true
 
+  fmt:
+    command: "prettier --experimental-cli --ignore-unknown --check ."
+
+  fmt.fix:
+    command: "prettier --experimental-cli --ignore-unknown --write ."
+    local: true
 
   types:
     command: "tsc --noEmit"
     inputs:
-      - '@group(sources)'
-      - '@group(typescript)'
+      - "@group(sources)"
+      - "@group(typescript)"
     deps:
-      - '^:build'
-  
+      - "^:build"

@@ -12,5 +12,3 @@ unstable_pnpm: {}
 typescript:
   syncProjectReferences: true
   routeOutDirToCache: true
-
-  

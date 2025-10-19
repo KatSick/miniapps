@@ -1,6 +1,6 @@
-language: 'typescript'
-type: 'application'
-tags: ['vite']
+language: "typescript"
+type: "application"
+tags: ["vite"]
 
 dependsOn:
   - design-system

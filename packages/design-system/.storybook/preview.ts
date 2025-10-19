@@ -1,7 +1,7 @@
 import type { Preview } from "@storybook/react-vite";
 
 // eslint-disable-next-line import/no-unassigned-import main css import
-import "./tailwind.css";
+import "../dist/assets/tailwind.css";
 
 const preview: Preview = {
   parameters: {

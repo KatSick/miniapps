@@ -2,7 +2,6 @@
   "$schema": "./node_modules/oxlint/configuration_schema.json",
   "plugins": [
     "unicorn",
-    "typescript",
     "oxc",
     "react",
     "jsx-a11y",
@@ -48,6 +47,10 @@
   "ignorePatterns": [],
   "overrides": [
     {
+      "files": ["src/**", "tests/**"],
+      "plugins": ["typescript"]
+    },
+    {
       "files": ["**/*.config.ts"],
       "rules": {
         "import/no-default-export": "off"
@@ -57,6 +60,17 @@
       "files": ["**/*.d.ts"],
       "rules": {
         "import/unambiguous": "off"
+      }
+    },
+    {
+      "files": ["**/tailwind.config.js"],
+      "env": {
+        "node": true
+      },
+      "plugins": null,
+      "rules": {
+        "import/no-anonymous-default-export": "off",
+        "import/no-default-export": "off"
       }
     }
   ]

@@ -1,6 +1,7 @@
 fileGroups:
   configs:
     - "*.yaml"
+    - "*.yml"
     - "*.json"
     - "*.md"
 

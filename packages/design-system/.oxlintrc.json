@@ -1,0 +1,24 @@
+{
+  "$schema": "../../node_modules/oxlint/configuration_schema.json",
+  "extends": ["../../.oxlintrc.json"],
+  "overrides": [
+    {
+      "files": ["src/**/*"],
+      "env": {
+        "browser": true
+      }
+    },
+    {
+      "files": ["tests/**/*"],
+      "env": {
+        "vitest": true
+      }
+    },
+    {
+      "files": ["src/**/*.stories.*", ".storybook/**/*"],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    }
+  ]
+}

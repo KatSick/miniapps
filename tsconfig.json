@@ -8,5 +8,8 @@
     {
       "path": "packages/design-system"
     }
-  ]
+  ],
+  "compilerOptions": {
+    "outDir": ".moon/cache/types"
+  }
 }

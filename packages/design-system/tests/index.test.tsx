@@ -1,6 +1,7 @@
 import { expect, test, vi } from "vitest";
 import { render } from "vitest-browser-react";
-import { MyButton } from "@/MyButton";
+
+import { MyButton } from "@/my-button";
 
 test("button", async () => {
   const click = vi.fn();

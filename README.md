@@ -1,10 +1,13 @@
 # miniapps
+
 ## Install proto (one time)
+
 1. Install [proto](https://moonrepo.dev/docs/proto/install): `bash <(curl -fsSL https://moonrepo.dev/install/proto.sh)`
 2. [Linux/MacOS] Ensure `export PROTO_HOME="$HOME/.proto"; export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH";` is in your `~/.zshrc`
 3. [Linux/MacOS] Add `eval "$(proto activate zsh)"` to the end of your `~/.zshrc`
 
 ## Run development
+
 1. Run: `proto use`
 2. Run: `moon :dev` for dev server
 
@@ -17,4 +20,5 @@
 5. e.g. ensure `proto --version` works
 
 ## Pro tips:
+
 - Install recommended extensions (moonrepo, vitest, editorconfig, etc)

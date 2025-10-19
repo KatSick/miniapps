@@ -1,9 +1,7 @@
 fileGroups:
   configs:
-    - "*.yaml"
-    - "*.yml"
-    - "*.json"
-    - "*.md"
+    - "*.{yaml,yml,json,md}"
+    - "{templates|.vscode|.moon|.github|.cursor}/**/*.{yaml,yml,json.md}"
 
 tasks:
   lint:

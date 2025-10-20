@@ -1,0 +1,15 @@
+language: "typescript"
+type: "application"
+tags: ["tsdown"]
+
+dependsOn:
+  - blog-shared
+
+tasks:
+  dev:
+    command: "node --watch --watch-preserve-output dist/index.js"
+    local: true
+    inputs:
+      - "dist/**"
+    deps:
+      - "watch"

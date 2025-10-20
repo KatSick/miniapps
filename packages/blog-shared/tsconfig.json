@@ -1,13 +1,13 @@
 {
   "extends": "../../tsconfig.options.json",
   "compilerOptions": {
-    "lib": ["ESNext", "DOM"],
+    "lib": ["ESNext"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     },
     "noEmit": false,
-    "outDir": "../../.moon/cache/types/packages/design-system"
+    "outDir": "../../.moon/cache/types/packages/blog-shared"
   },
-  "include": ["src", "tests", ".storybook"]
+  "include": ["src", "tests"]
 }

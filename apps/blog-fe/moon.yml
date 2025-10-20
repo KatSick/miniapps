@@ -4,3 +4,9 @@ tags: ["vite"]
 
 dependsOn:
   - design-system
+  - blog-shared
+
+tasks:
+  dev:
+    deps:
+      - "blog-api:watch"

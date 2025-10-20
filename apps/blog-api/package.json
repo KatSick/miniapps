@@ -1,0 +1,12 @@
+{
+  "name": "@miniapps/blog-api",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "dependencies": {
+    "@effect/platform": "catalog:",
+    "@effect/platform-node": "catalog:",
+    "effect": "catalog:",
+    "@miniapps/blog-shared": "workspace:*"
+  }
+}

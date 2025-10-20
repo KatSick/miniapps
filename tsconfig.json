@@ -3,7 +3,16 @@
   "files": [],
   "references": [
     {
+      "path": "apps/blog-api"
+    },
+    {
       "path": "apps/blog-fe"
+    },
+    {
+      "path": "packages/blog-shared"
+    },
+    {
+      "path": "packages/blog-shared"
     },
     {
       "path": "packages/design-system"

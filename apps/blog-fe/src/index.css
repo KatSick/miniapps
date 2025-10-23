@@ -1,0 +1,4 @@
+/** biome-ignore-all lint/suspicious/noUnknownAtRules: custom tailwind + shadcn rules */
+
+@config "../tailwind.config.js";
+@import "@miniapps/design-system/assets/tailwind.css";

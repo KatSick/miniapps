@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.options.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "outDir": "../../.moon/cache/types/apps/blog-fe"
+  },
+  "include": ["src", "tests"],
+  "references": [
+    {
+      "path": "../../packages/design-system"
+    }
+  ]
+}

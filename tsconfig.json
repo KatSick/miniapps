@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.options.json",
+  "files": [],
+  "references": [
+    {
+      "path": "apps/blog-fe"
+    },
+    {
+      "path": "packages/design-system"
+    }
+  ],
+  "compilerOptions": {
+    "outDir": ".moon/cache/types"
+  }
+}

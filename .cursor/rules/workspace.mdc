@@ -1,0 +1,11 @@
+---
+description: how to run commands in workspace
+globs: **/*
+alwaysApply: true
+---
+- use `bun install` to install dependencies
+- use `bunx` to run commands (for example `bunx playwright install chromium`)
+- always use `moon run :lint :types --affected` to verify changes you made
+- if needed, use moon mcp server to help you
+- use `moon <project>:<task>` to run tasks in the workspace (for example `moon blog-fe:dev` or for e2e tests `moon blog-fe:e2e`)
+

@@ -1,0 +1,77 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "unicorn",
+    "oxc",
+    "react",
+    "jsx-a11y",
+    "react-perf",
+    "import",
+    "vitest",
+    "regex",
+    "node"
+  ],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error",
+    "style": "error",
+    "pedantic": "error",
+    "perf": "error",
+    "restriction": "error",
+    "nursery": "error"
+  },
+  "rules": {
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".tsx"]
+      }
+    ],
+
+    "import/prefer-default-export": "off",
+    "import/no-named-export": "off",
+    "eslint/sort-imports": "off",
+    "react-in-jsx-scope": "off",
+    "eslint/no-duplicate-imports": ["error", { "allowSeparateTypeImports": true }],
+    "typescript/explicit-function-return-type": "off",
+    "oxc/no-rest-spread-properties": "off",
+    "react/only-export-components": ["off"],
+    "oxc/no-async-await": "off",
+    "no-ternary": "off"
+  },
+  "settings": {},
+  "env": {
+    "builtin": true
+  },
+  "globals": {},
+  "ignorePatterns": [],
+  "overrides": [
+    {
+      "files": ["src/**", "tests/**"],
+      "plugins": ["typescript"]
+    },
+    {
+      "files": ["**/*.config.ts"],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    },
+    {
+      "files": ["**/*.d.ts"],
+      "rules": {
+        "import/unambiguous": "off"
+      }
+    },
+    {
+      "files": ["**/tailwind.config.js"],
+      "env": {
+        "node": true
+      },
+      "plugins": null,
+      "rules": {
+        "import/no-anonymous-default-export": "off",
+        "import/no-default-export": "off"
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+$schema: "./cache/schemas/tasks.json"
+
+implicitInputs:
+  - /pnpm-lock.yaml
+  - /pnpm-workspace.yaml
+
+fileGroups:
+  files:
+    - "**/*"
+  sources:
+    - "src/**/*"
+    - "types/**/*"
+    - "public/**/*"
+    - "package.json"
+  tests:
+    - "tests/**/*.test.*"
+    - "**/__tests__/**/*"
+  e2e:
+    - "e2e-tests/**/*"
+  vite:
+    - index.html
+    - vite.config.ts
+  tsdown:
+    - tsdown.config.ts
+  typescript:
+    - tsconfig.*.json
+    - tsconfig.json
+    - /tsconfig.json
+    - /tsconfig.*.json
+  prettier:
+    - "/.prettierrc.json"
+
+tasks:
+  lint:
+    command: "oxlint --type-aware"
+
+  lint.fix:
+    command: "oxlint --type-aware --fix --fix-dangerously"
+    local: true
+
+  fmt:
+    command: "prettier --experimental-cli --ignore-unknown --check ."
+
+  fmt.fix:
+    command: "prettier --experimental-cli --ignore-unknown --write ."
+    local: true
+
+  types:
+    command: "tsc --noEmit"
+    inputs:
+      - "@group(sources)"
+      - "@group(typescript)"
+    deps:
+      - "^:build"

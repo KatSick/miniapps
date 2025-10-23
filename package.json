@@ -1,0 +1,29 @@
+{
+  "name": "miniapps",
+  "workspaces": [
+    "packages/**/*",
+    "apps/**/*"
+  ],
+  "scripts": {
+    "postinstall": "pnpm playwright install chromium"
+  },
+  "devDependencies": {
+    "@storybook/react-vite": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "@vitest/browser": "catalog:",
+    "globals": "catalog:",
+    "oxlint": "catalog:",
+    "oxlint-tsgolint": "catalog:",
+    "playwright": "catalog:",
+    "prettier": "catalog:",
+    "prettier-plugin-imports": "catalog:",
+    "storybook": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-tsconfig-paths": "catalog:",
+    "vitest": "catalog:",
+    "vitest-browser-react": "catalog:"
+  },
+  "packageManager": "pnpm@10.18.3"
+}

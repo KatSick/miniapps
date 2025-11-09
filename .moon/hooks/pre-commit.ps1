@@ -15,5 +15,3 @@ moon run :lint :fmt :types :build :test --affected --status=staged
 if ($LASTEXITCODE -ne 0) {
   exit $LASTEXITCODE
 }
-
-

@@ -4,30 +4,32 @@ packages:
 
 catalog:
   '@radix-ui/react-slot': ^1.2.3
-  '@storybook/react-vite': ^10.0.3
-  '@tailwindcss/vite': ^4.1.16
+  '@storybook/react-vite': ^10.0.6
+  '@tailwindcss/vite': ^4.1.17
   '@types/react': ^19.2.2
   '@types/react-dom': ^19.2.2
-  '@vitest/browser': ^4.0.6
+  '@vitest/browser': ^4.0.8
+  '@vitest/browser-playwright': ^4.0.8
   class-variance-authority: ^0.7.1
   clsx: ^2.1.1
   globals: ^16.5.0
   lucide-react: ^0.552.0
-  oxlint: ^1.25.0
-  oxlint-tsgolint: ^0.4.0
+  oxlint: ^1.26.0
+  oxlint-tsgolint: ^0.5.1
   playwright: ^1.56.1
   prettier: 3.6.2
   prettier-plugin-imports: ^4.3.3
   react: ^19.2.0
   react-dom: ^19.2.0
-  storybook: ^10.0.3
+  storybook: ^10.0.6
   tailwind-merge: ^3.3.1
   tailwindcss: ^4.1.16
-  tsdown: ^0.15.12
+  tsdown: ^0.16.1
   tw-animate-css: ^1.4.0
   typescript: ^5.9.3
-  vite-tsconfig-paths: ^6.0.0-beta.4
-  vitest: ^4.0.6
+  vite: npm:rolldown-vite@7.2.2
+  vite-tsconfig-paths: 6.0.0-beta.4
+  vitest: ^4.0.8
   vitest-browser-react: ^2.0.2
 
 catalogMode: strict
@@ -55,5 +57,5 @@ overrides:
   react-dom: 'catalog:'
   storybook: 'catalog:'
   typescript: 'catalog:'
-  vite: npm:rolldown-vite@7.1.17
+  vite: npm:rolldown-vite@latest
   vitest: 'catalog:'

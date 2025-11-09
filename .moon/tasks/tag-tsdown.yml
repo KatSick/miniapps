@@ -20,6 +20,14 @@ tasks:
     command: "storybook dev -p 6006"
     local: true
 
+  storybook.build:
+    command: "storybook build"
+    inputs:
+      - .storybok
+      - src
+    outputs:
+      - storybook-static
+
   test:
     command:
       - "vitest"
@@ -36,3 +44,4 @@ tasks:
     deps:
       - "lint"
       - "types"
+      - "build"

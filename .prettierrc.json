@@ -1,8 +1,7 @@
 {
   "importOrder": ["<TYPES>", "", "<THIRD_PARTY_MODULES>", "", "^@/(.*)$", "", "^[./]"],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true,
   "plugins": ["prettier-plugin-imports"],
   "printWidth": 100,
-  "trailingComa": "all"
+  "trailingComma": "all",
+  "endOfLine": "lf"
 }

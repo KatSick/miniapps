@@ -1,0 +1,16 @@
+$schema: "./cache/schemas/tasks.json"
+
+tasks:
+  storybook:
+    command: "storybook dev -p 6006"
+    local: true
+
+  storybook.build:
+    command: "storybook build"
+    inputs:
+      - .storybok
+      - src
+    outputs:
+      - storybook-static
+    deps:
+      - build

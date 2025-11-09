@@ -38,13 +38,6 @@ tasks:
     command: "oxlint --type-aware --fix --fix-dangerously"
     local: true
 
-  fmt:
-    command: "prettier --experimental-cli --ignore-unknown --check ."
-
-  fmt.fix:
-    command: "prettier --experimental-cli --ignore-unknown --write ."
-    local: true
-
   types:
     command: "tsc --noEmit"
     inputs:

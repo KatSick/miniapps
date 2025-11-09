@@ -12,3 +12,5 @@ tasks:
       - src
     outputs:
       - storybook-static
+    deps:
+      - build

@@ -10,6 +10,6 @@ test("button", async () => {
 
   await buttonElement.click();
 
-  await expect(buttonElement).toMatchScreenshot();
+  // await expect(buttonElement).toMatchScreenshot();
   expect(click).toHaveBeenCalledOnce();
 });

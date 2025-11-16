@@ -1,6 +1,6 @@
-moon = "1.41.6"
-node = "25.1.0"
-pnpm = "10.20.0"
+moon = "1.41.7"
+node = "25.2.0"
+pnpm = "10.22.0"
 
 [settings]
 auto-install = true

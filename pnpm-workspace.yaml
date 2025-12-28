@@ -15,7 +15,7 @@ catalog:
   '@opentelemetry/sdk-trace-web': ^2.2.0
   '@opentelemetry/semantic-conventions': ^1.38.0
   '@radix-ui/react-slot': ^1.2.3
-  '@storybook/react-vite': ^10.0.7
+  '@storybook/react-vite': ^10.1.10
   '@tailwindcss/vite': ^4.1.17
   '@types/react': ^19.2.2
   '@types/react-dom': ^19.2.2
@@ -33,7 +33,7 @@ catalog:
   prettier-plugin-imports: ^4.3.3
   react: ^19.2.0
   react-dom: ^19.2.0
-  storybook: ^10.0.7
+  storybook: ^10.1.10
   tailwind-merge: ^3.3.1
   tailwindcss: ^4.1.16
   tsdown: ^0.16.4
@@ -59,6 +59,7 @@ mergeGitBranchLockfilesBranchPattern:
   - main
 
 overrides:
+  glog: 10.5.0
   '@oxc-project/types': 0.94.0
   '@storybook/react-vite': 'catalog:'
   '@types/react': 'catalog:'

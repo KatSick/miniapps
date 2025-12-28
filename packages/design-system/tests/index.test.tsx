@@ -10,5 +10,5 @@ test("button", async () => {
 
   await buttonElement.click();
 
-  expect(click).toHaveBeenCalledOnce();
+  expect(click).toHaveBeenCalledTimes(1);
 });

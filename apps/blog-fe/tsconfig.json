@@ -4,9 +4,14 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "outDir": "../../.moon/cache/types/apps/blog-fe"
+    "outDir": "../../.moon/cache/types/apps/blog-fe",
+    "plugins": [
+      {
+        "name": "@effect/language-service"
+      }
+    ]
   },
-  "include": ["src", "tests"],
+  "include": ["src", "tests", "package.json"],
   "references": [
     {
       "path": "../../packages/design-system"

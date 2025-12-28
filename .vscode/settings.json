@@ -4,8 +4,10 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.oxc": "always"
   },
+  "moon.rootPrefixes": ["~/.proto/shims/moon"],
 
-  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
 
   "editor.defaultFormatter": "esbenp.prettier-vscode",
 
@@ -38,5 +40,6 @@
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "oxc.enable": true
 }

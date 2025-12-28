@@ -1,16 +1,6 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": [
-    "unicorn",
-    "oxc",
-    "react",
-    "jsx-a11y",
-    "react-perf",
-    "import",
-    "vitest",
-    "regex",
-    "node"
-  ],
+  "plugins": ["unicorn", "oxc", "react", "jsx-a11y", "react-perf", "import", "vitest", "node"],
   "categories": {
     "correctness": "error",
     "suspicious": "error",
@@ -21,6 +11,8 @@
     "nursery": "error"
   },
   "rules": {
+    "typescript/no-confusing-void-expression": "off",
+    "max-dependencies": "off",
     "react/jsx-filename-extension": [
       "error",
       {
@@ -48,7 +40,10 @@
   "overrides": [
     {
       "files": ["src/**", "tests/**"],
-      "plugins": ["typescript"]
+      "plugins": ["typescript"],
+      "rules": {
+        "no-magic-numbers": "off"
+      }
     },
     {
       "files": ["**/*.config.ts"],

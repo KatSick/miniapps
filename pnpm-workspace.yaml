@@ -3,8 +3,19 @@ packages:
   - apps/*
 
 catalog:
+  '@effect/language-service': ^0.62.5
+  '@effect/opentelemetry': ^0.60.0
+  '@opentelemetry/exporter-logs-otlp-http': ^0.208.0
+  '@opentelemetry/exporter-metrics-otlp-http': ^0.208.0
+  '@opentelemetry/exporter-trace-otlp-http': ^0.208.0
+  '@opentelemetry/sdk-logs': ^0.208.0
+  '@opentelemetry/sdk-metrics': 2.2.0
+  '@opentelemetry/sdk-trace-base': ^2.2.0
+  '@opentelemetry/sdk-trace-node': ^2.2.0
+  '@opentelemetry/sdk-trace-web': ^2.2.0
+  '@opentelemetry/semantic-conventions': ^1.38.0
   '@radix-ui/react-slot': ^1.2.3
-  '@storybook/react-vite': ^10.0.7
+  '@storybook/react-vite': ^10.1.10
   '@tailwindcss/vite': ^4.1.17
   '@types/react': ^19.2.2
   '@types/react-dom': ^19.2.2
@@ -12,16 +23,17 @@ catalog:
   '@vitest/browser-playwright': ^4.0.9
   class-variance-authority: ^0.7.1
   clsx: ^2.1.1
+  effect: ^3.19.13
   globals: ^16.5.0
   lucide-react: ^0.552.0
-  oxlint: ^1.28.0
-  oxlint-tsgolint: ^0.5.1
+  oxlint: ^1.35.0
+  oxlint-tsgolint: ^0.10.0
   playwright: ^1.56.1
   prettier: 3.6.2
   prettier-plugin-imports: ^4.3.3
   react: ^19.2.0
   react-dom: ^19.2.0
-  storybook: ^10.0.7
+  storybook: ^10.1.10
   tailwind-merge: ^3.3.1
   tailwindcss: ^4.1.16
   tsdown: ^0.16.4
@@ -31,21 +43,23 @@ catalog:
   vite-tsconfig-paths: 6.0.0-beta.4
   vitest: ^4.0.9
   vitest-browser-react: ^2.0.2
+  web-vitals: ^5.1.0
 
 catalogMode: strict
 
 cleanupUnusedCatalogs: true
 
-gitBranchLockfile: true
-
 ignoredBuiltDependencies:
   - '@tailwindcss/oxide'
   - esbuild
+  - msgpackr-extract
+  - protobufjs
 
 mergeGitBranchLockfilesBranchPattern:
   - main
 
 overrides:
+  glog: 10.5.0
   '@oxc-project/types': 0.94.0
   '@storybook/react-vite': 'catalog:'
   '@types/react': 'catalog:'

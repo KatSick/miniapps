@@ -11,6 +11,12 @@
 1. Run: `proto use`
 2. Run: `moon :dev` for dev server
 
+## To run (and see) OTEL
+
+- Run `git clone -b main https://github.com/SigNoz/signoz.git && cd signoz/deploy/docker`
+- Run `docker compose up`
+- Go to http://localhost:8080/, register and login
+
 ## quirks for Windows
 
 1. [Install Latest PowerShell in ADMIN Terminal](https://learn.microsoft.com/uk-ua/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.5): `winget install --id Microsoft.PowerShell --source winget`

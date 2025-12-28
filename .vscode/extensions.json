@@ -8,6 +8,7 @@
     "github.vscode-github-actions",
     "github.vscode-pull-request-github",
     "redhat.vscode-yaml",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "effectful-tech.effect-vscode"
   ]
 }

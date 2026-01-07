@@ -1,47 +1,52 @@
-$schema: "./cache/schemas/tasks.json"
+$schema: ./cache/schemas/tasks.json
 
 tasks:
   build:
-    command: "tsdown"
+    command: tsdown
     inputs:
       - "@group(tsdown)"
       - "@group(sources)"
     outputs:
-      - "dist"
+      - dist
     deps:
-      - "lint"
-      - "types"
-
+      - lint
+      - types
+  
   watch:
-    command: "tsdown --watch  --no-clean"
-    local: true
-
+    command: tsdown --watch --no-clean
+    preset: server
+    options:
+      runInCI: false
+  
   storybook:
-    command: "storybook dev -p 6006"
-    local: true
-
+    command: storybook dev -p 6006
+    preset: server
+    options:
+      runInCI: false
+  
   storybook.build:
-    command: "storybook build"
+    command: storybook build
     inputs:
       - .storybok
       - src
     outputs:
       - storybook-static
-
+  
   test:
     command:
-      - "vitest"
-      - "run"
-      - "--config"
+      - vitest
+      - run
+      - --config
       - "@in(0)"
-
     inputs:
       - vitest.config.ts
       - "@group(sources)"
       - "@group(tests)"
-    outputs:
-      # - 'coverage'
+    outputs: null
     deps:
-      - "lint"
-      - "types"
-      - "build"
+      - lint
+      - types
+      - build
+
+inheritedBy:
+  tag: tsdown

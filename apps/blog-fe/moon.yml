@@ -1,6 +1,9 @@
-language: "typescript"
-type: "application"
-tags: ["vite"]
+language: typescript
 
 dependsOn:
   - design-system
+
+tags:
+  - vite
+
+layer: application

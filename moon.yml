@@ -1,7 +1,9 @@
 tasks:
   fmt:
-    command: "prettier --experimental-cli --ignore-unknown --check ."
-
+    command: prettier --experimental-cli --ignore-unknown --check .
+  
   fmt.fix:
-    command: "prettier --experimental-cli --ignore-unknown --write ."
-    local: true
+    command: prettier --experimental-cli --ignore-unknown --write .
+    preset: server
+    options:
+      runInCI: false

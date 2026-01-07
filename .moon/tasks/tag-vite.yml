@@ -1,45 +1,50 @@
-$schema: "./cache/schemas/tasks.json"
+$schema: ./cache/schemas/tasks.json
 
 tasks:
   build:
-    command: "vite build"
+    command: vite build
     inputs:
       - "@group(vite)"
       - "@group(sources)"
     outputs:
-      - "dist"
+      - dist
     deps:
-      - "lint"
-      - "types"
-      - "^:build"
-
+      - lint
+      - types
+      - ^:build
+  
   dev:
-    command: "vite dev"
-    local: true
+    command: vite dev
     deps:
-      - "^:build"
-      - "^:watch"
+      - ^:build
+      - ^:watch
+    preset: server
+    options:
+      runInCI: false
 
   test:
     command:
-      - "vitest"
-      - "run"
-      - "--config"
+      - vitest
+      - run
+      - --config
       - "@in(0)"
-
     inputs:
       - vitest.browser.config.ts
       - "@group(sources)"
       - "@group(e2e)"
-    outputs:
-      # - 'coverage'
+    outputs: null
     deps:
-      - "lint"
-      - "types"
-      - "^:build"
+      - lint
+      - types
+      - ^:build
 
   test.watch:
     extends: test
     args:
-      - "--watch"
-    local: true
+      - --watch
+    preset: server
+    options:
+      runInCI: false
+
+inheritedBy:
+  tag: vite

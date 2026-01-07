@@ -1,12 +1,14 @@
-$schema: "./cache/schemas/tasks.json"
+$schema: ./cache/schemas/tasks.json
 
 tasks:
   storybook:
-    command: "storybook dev -p 6006"
-    local: true
+    command: storybook dev -p 6006
+    preset: server
+    options:
+      runInCI: false
 
   storybook.build:
-    command: "storybook build"
+    command: storybook build
     inputs:
       - .storybok
       - src
@@ -14,3 +16,6 @@ tasks:
       - storybook-static
     deps:
       - build
+
+inheritedBy:
+  tag: storybook

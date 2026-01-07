@@ -7,7 +7,8 @@ export default defineConfig({
   server: {
     proxy: {
       "/otlp": {
-        rewrite: (path) => path.replace(/^\/otlp/, ""), target: "http://localhost:4318",
+        rewrite: (path) => path.replace(/^\/otlp/, ""),
+        target: "http://localhost:4318",
       },
     },
   },

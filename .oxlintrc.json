@@ -19,7 +19,7 @@
         "extensions": [".tsx"]
       }
     ],
-
+    "react/jsx-max-depth": ["error", { "max": 10 }],
     "import/prefer-default-export": "off",
     "import/no-named-export": "off",
     "eslint/sort-imports": "off",

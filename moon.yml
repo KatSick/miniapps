@@ -1,7 +1,7 @@
 tasks:
   fmt:
-    command: "prettier --experimental-cli --ignore-unknown --check ."
+    command: "oxfmt --check ."
 
   fmt.fix:
-    command: "prettier --experimental-cli --ignore-unknown --write ."
+    command: "oxfmt --write ."
     local: true

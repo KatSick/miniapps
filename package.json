@@ -13,11 +13,10 @@
     "@vitest/browser": "catalog:",
     "@vitest/browser-playwright": "catalog:",
     "globals": "catalog:",
+    "oxfmt": "catalog:",
     "oxlint": "catalog:",
     "oxlint-tsgolint": "catalog:",
     "playwright": "catalog:",
-    "prettier": "catalog:",
-    "prettier-plugin-imports": "catalog:",
     "storybook": "catalog:",
     "tsdown": "catalog:",
     "typescript": "catalog:",
@@ -26,6 +25,5 @@
     "vitest": "catalog:",
     "vitest-browser-react": "catalog:"
   },
-  "packageManager": "pnpm@10.28.0",
-  "dependencies": {}
+  "packageManager": "pnpm@10.28.0"
 }

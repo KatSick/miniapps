@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "importOrder": ["<TYPES>", "", "<THIRD_PARTY_MODULES>", "", "^@/(.*)$", "", "^[./]"],
+  "printWidth": 100,
+  "trailingComma": "all",
+  "endOfLine": "lf",
+  "ignorePatterns": ["pnpm-workspace.yaml", "pnpm-lock.yaml", ".moon/cache/**"]
+}

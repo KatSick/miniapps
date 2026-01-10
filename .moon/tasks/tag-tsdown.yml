@@ -15,33 +15,3 @@ tasks:
   watch:
     command: "tsdown --watch  --no-clean"
     local: true
-
-  storybook:
-    command: "storybook dev -p 6006"
-    local: true
-
-  storybook.build:
-    command: "storybook build"
-    inputs:
-      - .storybok
-      - src
-    outputs:
-      - storybook-static
-
-  test:
-    command:
-      - "vitest"
-      - "run"
-      - "--config"
-      - "@in(0)"
-
-    inputs:
-      - vitest.config.ts
-      - "@group(sources)"
-      - "@group(tests)"
-    outputs:
-      # - 'coverage'
-    deps:
-      - "lint"
-      - "types"
-      - "build"

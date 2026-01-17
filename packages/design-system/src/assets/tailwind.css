@@ -16,8 +16,8 @@
   --text-strong: #000000;
 
   /* Typography */
-  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
-  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 
   /* Spacing */
   --space-section: 4rem;
@@ -132,15 +132,21 @@
     font-family: var(--font-sans);
   }
   .prompt-prefix::before {
-    content: '> ';
+    content: "> ";
     @apply text-text-muted;
   }
   @keyframes cursor-blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
+    0%,
+    50% {
+      opacity: 1;
+    }
+    51%,
+    100% {
+      opacity: 0;
+    }
   }
   .cursor-blink::after {
-    content: '▌';
+    content: "▌";
     @apply text-text-muted animate-[cursor-blink_1s_steps(1)_infinite];
   }
 }

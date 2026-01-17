@@ -15,6 +15,7 @@
 ### Task 1.1: Update CSS Tokens
 
 **Files:**
+
 - Modify: `packages/design-system/src/assets/tailwind.css`
 
 **Step 1: Replace color tokens with terminal grey scale**
@@ -40,8 +41,8 @@ Replace the entire `:root` and `.dark` blocks with the new terminal tokens:
   --text-strong: #000000;
 
   /* Typography */
-  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
-  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 
   /* Spacing */
   --space-section: 4rem;
@@ -156,15 +157,21 @@ Replace the entire `:root` and `.dark` blocks with the new terminal tokens:
     font-family: var(--font-sans);
   }
   .prompt-prefix::before {
-    content: '> ';
+    content: "> ";
     @apply text-text-muted;
   }
   @keyframes cursor-blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
+    0%,
+    50% {
+      opacity: 1;
+    }
+    51%,
+    100% {
+      opacity: 0;
+    }
   }
   .cursor-blink::after {
-    content: '▌';
+    content: "▌";
     @apply text-text-muted animate-[cursor-blink_1s_steps(1)_infinite];
   }
 }
@@ -187,6 +194,7 @@ git commit -m "feat(design-system): add terminal grey color tokens and utilities
 ### Task 1.2: Add Font Loading
 
 **Files:**
+
 - Modify: `apps/blog-fe/index.html`
 
 **Step 1: Add Google Fonts links**
@@ -194,9 +202,12 @@ git commit -m "feat(design-system): add terminal grey color tokens and utilities
 Add to `<head>`:
 
 ```html
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+  rel="stylesheet"
+/>
 ```
 
 **Step 2: Verify dev server works**
@@ -218,6 +229,7 @@ git commit -m "feat(blog-fe): add JetBrains Mono and Inter font loading"
 ### Task 2.1: Create Heading Component
 
 **Files:**
+
 - Create: `packages/design-system/src/components/typography/heading/heading.tsx`
 - Create: `packages/design-system/src/components/typography/heading/heading.test.tsx`
 - Create: `packages/design-system/src/components/typography/heading/index.ts`
@@ -343,6 +355,7 @@ git commit -m "feat(design-system): add Heading component with prompt prefix"
 ### Task 2.2: Create Text Component
 
 **Files:**
+
 - Create: `packages/design-system/src/components/typography/text/text.tsx`
 - Create: `packages/design-system/src/components/typography/text/text.test.tsx`
 - Create: `packages/design-system/src/components/typography/text/index.ts`
@@ -464,6 +477,7 @@ git commit -m "feat(design-system): add Text component with variants"
 ### Task 2.3: Create Code Component
 
 **Files:**
+
 - Create: `packages/design-system/src/components/typography/code/code.tsx`
 - Create: `packages/design-system/src/components/typography/code/code.test.tsx`
 - Create: `packages/design-system/src/components/typography/code/index.ts`
@@ -581,6 +595,7 @@ git commit -m "feat(design-system): add Code and CodeBlock components"
 ### Task 2.4: Export Typography Components
 
 **Files:**
+
 - Modify: `packages/design-system/src/index.ts`
 
 **Step 1: Add exports**
@@ -613,6 +628,7 @@ git commit -m "feat(design-system): export typography components"
 ### Task 3.1: Update Button for Terminal Style
 
 **Files:**
+
 - Modify: `packages/design-system/src/components/base/button/button.tsx`
 - Modify: `packages/design-system/src/components/base/button/button.test.tsx`
 
@@ -701,6 +717,7 @@ git commit -m "feat(design-system): update Button to terminal monochrome style"
 ### Task 3.2: Create Input Component
 
 **Files:**
+
 - Create: `packages/design-system/src/components/base/input/input.tsx`
 - Create: `packages/design-system/src/components/base/input/input.test.tsx`
 - Create: `packages/design-system/src/components/base/input/index.ts`
@@ -792,6 +809,7 @@ git commit -m "feat(design-system): add Input component"
 ### Task 3.3: Create Link Component
 
 **Files:**
+
 - Create: `packages/design-system/src/components/base/link/link.tsx`
 - Create: `packages/design-system/src/components/base/link/link.test.tsx`
 - Create: `packages/design-system/src/components/base/link/index.ts`
@@ -885,6 +903,7 @@ git commit -m "feat(design-system): add Link component with dashed underline"
 ### Task 3.4: Create Card Component
 
 **Files:**
+
 - Create: `packages/design-system/src/components/base/card/card.tsx`
 - Create: `packages/design-system/src/components/base/card/card.test.tsx`
 - Create: `packages/design-system/src/components/base/card/index.ts`
@@ -1038,6 +1057,7 @@ git commit -m "feat(design-system): add Card component family"
 ### Task 3.5: Export Base Components
 
 **Files:**
+
 - Modify: `packages/design-system/src/index.ts`
 
 **Step 1: Add exports**
@@ -1073,6 +1093,7 @@ git commit -m "feat(design-system): export base components"
 ### Task 4.1: Create Container Component
 
 **Files:**
+
 - Create: `packages/design-system/src/components/layout/container/container.tsx`
 - Create: `packages/design-system/src/components/layout/container/container.test.tsx`
 - Create: `packages/design-system/src/components/layout/container/index.ts`
@@ -1169,6 +1190,7 @@ git commit -m "feat(design-system): add Container component"
 ### Task 4.2: Create Header Component
 
 **Files:**
+
 - Create: `packages/design-system/src/components/layout/header/header.tsx`
 - Create: `packages/design-system/src/components/layout/header/header.test.tsx`
 - Create: `packages/design-system/src/components/layout/header/index.ts`
@@ -1226,10 +1248,7 @@ const Header = ({
   ...props
 }: HeaderProps): ReactElement => {
   return (
-    <header
-      className={cn("border-b border-border bg-background", className)}
-      {...props}
-    >
+    <header className={cn("border-b border-border bg-background", className)} {...props}>
       <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
         <a
           href={logoHref}
@@ -1273,6 +1292,7 @@ git commit -m "feat(design-system): add Header component"
 ### Task 4.3: Create Footer Component
 
 **Files:**
+
 - Create: `packages/design-system/src/components/layout/footer/footer.tsx`
 - Create: `packages/design-system/src/components/layout/footer/footer.test.tsx`
 - Create: `packages/design-system/src/components/layout/footer/index.ts`
@@ -1358,6 +1378,7 @@ git commit -m "feat(design-system): add Footer component"
 ### Task 4.4: Create Nav Component
 
 **Files:**
+
 - Create: `packages/design-system/src/components/layout/nav/nav.tsx`
 - Create: `packages/design-system/src/components/layout/nav/nav.test.tsx`
 - Create: `packages/design-system/src/components/layout/nav/index.ts`
@@ -1462,6 +1483,7 @@ git commit -m "feat(design-system): add NavLink component"
 ### Task 4.5: Export Layout Components
 
 **Files:**
+
 - Modify: `packages/design-system/src/index.ts`
 
 **Step 1: Add exports**
@@ -1501,6 +1523,7 @@ git commit -m "feat(design-system): export layout components"
 ### Task 5.1: Create Blog Layout
 
 **Files:**
+
 - Create: `apps/blog-fe/src/components/layout.tsx`
 
 **Step 1: Create layout component**
@@ -1547,6 +1570,7 @@ git commit -m "feat(blog-fe): add Layout component"
 ### Task 5.2: Create Blog Post List
 
 **Files:**
+
 - Create: `apps/blog-fe/src/components/post-list.tsx`
 
 **Step 1: Create post list component**
@@ -1601,6 +1625,7 @@ git commit -m "feat(blog-fe): add PostList component"
 ### Task 5.3: Create Blog Post View
 
 **Files:**
+
 - Create: `apps/blog-fe/src/components/post-view.tsx`
 
 **Step 1: Create post view component**
@@ -1649,6 +1674,7 @@ git commit -m "feat(blog-fe): add PostView component"
 ### Task 5.4: Update App Entry
 
 **Files:**
+
 - Modify: `apps/blog-fe/src/app-entry.tsx`
 
 **Step 1: Replace with blog home page**
@@ -1734,12 +1760,12 @@ Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 
 ## Summary
 
-| Phase | Tasks | Components |
-|-------|-------|------------|
-| 1. Foundation | 2 | CSS tokens, fonts |
-| 2. Typography | 4 | Heading, Text, Code, CodeBlock |
-| 3. Base | 5 | Button, Input, Link, Card |
-| 4. Layout | 5 | Container, Header, Footer, NavLink |
-| 5. Blog | 5 | Layout, PostList, PostView, App |
+| Phase         | Tasks | Components                         |
+| ------------- | ----- | ---------------------------------- |
+| 1. Foundation | 2     | CSS tokens, fonts                  |
+| 2. Typography | 4     | Heading, Text, Code, CodeBlock     |
+| 3. Base       | 5     | Button, Input, Link, Card          |
+| 4. Layout     | 5     | Container, Header, Footer, NavLink |
+| 5. Blog       | 5     | Layout, PostList, PostView, App    |
 
 **Total: 21 tasks**

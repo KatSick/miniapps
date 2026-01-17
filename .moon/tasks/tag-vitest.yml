@@ -1,0 +1,30 @@
+$schema: "./cache/schemas/tasks.json"
+
+tasks:
+  test.base:
+    command:
+      - "vitest"
+      - "run"
+      - "--config"
+      - "@in(0)"
+    inputs:
+      - vitest.config.ts
+      - "@group(sources)"
+      - "@group(tests)"
+    deps:
+      - "lint"
+      - "types"
+      - "build"
+    options:
+      runInCI: false
+
+  test:
+    extends: test.base
+    args:
+      - "--browser.headless"
+
+  test.watch:
+    extends: test.base
+    args:
+      - "--watch"
+    local: true

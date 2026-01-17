@@ -1,1 +1,1 @@
-export { MyButton } from "./my-button";
+export { Button } from "./components/base/button/button";

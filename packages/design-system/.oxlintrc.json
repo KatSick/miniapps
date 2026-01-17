@@ -17,7 +17,8 @@
     {
       "files": ["src/**/*.stories.*", ".storybook/**/*"],
       "rules": {
-        "import/no-default-export": "off"
+        "import/no-default-export": "off",
+        "group-exports": "off"
       }
     }
   ]

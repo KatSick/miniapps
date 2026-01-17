@@ -58,14 +58,15 @@
       }
     },
     {
-      "files": ["**/tailwind.config.js"],
+      "files": ["**/tailwind.config.js", ".pnpmfile.cjs"],
       "env": {
         "node": true
       },
       "plugins": null,
       "rules": {
         "import/no-anonymous-default-export": "off",
-        "import/no-default-export": "off"
+        "import/no-default-export": "off",
+        "import/unambiguous": "off"
       }
     }
   ]

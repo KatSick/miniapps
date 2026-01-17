@@ -111,3 +111,6 @@ vite.config.ts.timestamp-*
 # playwright
 playwright-report
 test-results
+
+# worktrees
+.worktrees

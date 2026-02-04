@@ -9,6 +9,7 @@
     "github.vscode-pull-request-github",
     "redhat.vscode-yaml",
     "effectful-tech.effect-vscode",
-    "oxc.oxc-vscode"
+    "oxc.oxc-vscode",
+    "matthewpi.caddyfile-support"
   ]
 }

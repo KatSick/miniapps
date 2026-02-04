@@ -1,0 +1,15 @@
+services:
+  blog-fe:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - traefik-network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.blog-fe.rule=Host(`blog.localhost`)"
+      - "traefik.http.routers.blog-fe.entrypoints=web"
+
+networks:
+  traefik-network:
+    external: true

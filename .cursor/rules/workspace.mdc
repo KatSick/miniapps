@@ -1,10 +1,9 @@
 ---
-description: how to run commands in workspace
-globs: **/*
+description: 
 alwaysApply: true
 ---
 
 - use `pnpm install` to install dependencies
 - always use `moon ci` to verify changes you made
 - if needed, use moon mcp server to help you
-- use `moon <project>:<task>` to run tasks in the workspace (for example `moon blog-fe:dev` or for e2e tests `moon blog-fe:e2e`)
+- use `moon <project>:<task>` to run tasks in the workspace (for example `moon blog-fe:dev` or for e2e tests `moon blog-fe:test`).

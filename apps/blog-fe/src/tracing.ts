@@ -8,7 +8,7 @@ import { BatchSpanProcessor } from "@opentelemetry/sdk-trace-base";
 import { ATTR_DEPLOYMENT_ENVIRONMENT_NAME } from "@opentelemetry/semantic-conventions/incubating";
 import { Duration } from "effect";
 
-import { name, version } from "../package.json";
+import { name, version } from "@/package.json";
 
 export const WebSdkLive = WebSdk.layer(() => ({
   logRecordProcessor: new BatchLogRecordProcessor(

@@ -2,7 +2,8 @@
   "extends": "../../tsconfig.options.json",
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/package.json": ["./package.json"]
     },
     "outDir": "../../.moon/cache/types/apps/blog-fe",
     "plugins": [

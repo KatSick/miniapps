@@ -13,5 +13,5 @@ tasks:
       - "types"
 
   watch:
-    command: "tsdown --watch  --no-clean"
+    command: "tsdown --watch --no-clean"
     local: true

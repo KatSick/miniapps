@@ -14,10 +14,24 @@ export const Default: Story = {
   },
 };
 
-export const Destructive: Story = {
+export const Secondary: Story = {
   args: {
     children: "Button",
-    variant: "destructive",
+    variant: "secondary",
+  },
+};
+
+export const Ghost: Story = {
+  args: {
+    children: "Button",
+    variant: "ghost",
+  },
+};
+
+export const Link: Story = {
+  args: {
+    children: "Button",
+    variant: "link",
   },
 };
 

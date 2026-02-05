@@ -4,3 +4,17 @@ tags: ["vite"]
 
 dependsOn:
   - design-system
+  - signoz
+  - traefik
+
+env:
+  DOMAIN_NAME: "blog-fe.localhost"
+
+tasks:
+  preview:
+    command: "docker compose up --build"
+    preset: "server"
+    deps:
+      - build
+      - traefik:infra
+      - signoz:infra

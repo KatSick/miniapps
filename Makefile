@@ -9,3 +9,12 @@ up:
 	pnpm up --latest --interactive --recursive && \
 	pnpm dedupe && \
 	moon ci
+
+dev:
+	moon :dev
+
+infra:
+	moon :infra
+
+preview:
+	moon :preview

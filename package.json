@@ -23,10 +23,10 @@
     "storybook": "catalog:",
     "tsdown": "catalog:",
     "typescript": "catalog:",
-    "vite": "catalog:",
+    "vite": "8.0.0-beta.0",
     "vite-tsconfig-paths": "catalog:",
     "vitest": "catalog:",
     "vitest-browser-react": "catalog:"
   },
-  "packageManager": "pnpm@10.28.0"
+  "packageManager": "pnpm@10.28.2"
 }

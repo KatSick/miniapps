@@ -13,9 +13,29 @@ tasks:
       - "types"
       - "^:build"
 
+  mkcert.install:
+    command: "mkcert -install"
+    local: true
+
+  mkcert:
+    command: "mkcert -key-file localhost.key -cert-file localhost.pem $DOMAIN_NAME"
+    outputs:
+      - "localhost.key"
+      - "localhost.pem"
+    deps:
+      - "mkcert.install"
+    local: true
+
+  caddy:
+    command: "caddy run --config Caddyfile.local --watch"
+    preset: "server"
+    deps:
+      - "mkcert"
+
   dev:
     command: "vite dev"
-    local: true
+    preset: "server"
     deps:
+      - "caddy"
       - "^:build"
       - "^:watch"

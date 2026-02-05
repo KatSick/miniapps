@@ -2,7 +2,9 @@
   "extends": "../../tsconfig.options.json",
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/package.json": ["./package.json"],
+      "@/setup-styles": ["./setup-styles.ts"]
     },
     "noEmit": false,
     "outDir": "../../.moon/cache/types/packages/design-system"

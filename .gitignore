@@ -111,3 +111,19 @@ vite.config.ts.timestamp-*
 # playwright
 playwright-report
 test-results
+
+# worktrees
+.worktrees
+
+# local data
+*.backup
+*.db
+**/db
+/infra/signoz/deploy/docker/clickhouse-setup/data/
+bin/
+.local/
+*/query-service/queries.active
+ee/query-service/db
+
+*.key
+*.pem

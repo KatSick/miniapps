@@ -1,6 +1,12 @@
 moon = "1.41.8"
-node = "25.3.0"
-pnpm = "10.28.0"
+node = "25.6.0"
+pnpm = "10.28.2"
+caddy = "2.10.2"
+mkcert = "1.4.4"
 
 [settings]
 auto-install = true
+
+[plugins.tools]
+caddy = "https://raw.githubusercontent.com/Phault/proto-toml-plugins/main/caddy/plugin.toml"
+mkcert = "https://raw.githubusercontent.com/Phault/proto-toml-plugins/main/mkcert/plugin.toml"

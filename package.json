@@ -23,7 +23,7 @@
     "storybook": "catalog:",
     "tsdown": "catalog:",
     "typescript": "catalog:",
-    "vite": "8.0.0-beta.0",
+    "vite": "8.0.0-beta.13",
     "vite-tsconfig-paths": "catalog:",
     "vitest": "catalog:",
     "vitest-browser-react": "catalog:"

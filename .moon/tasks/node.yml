@@ -30,6 +30,8 @@ fileGroups:
 tasks:
   lint:
     command: oxlint --type-aware --deny-warnings --report-unused-disable-directives
+    deps:
+      - ^:build
   lint.fix:
     command: oxlint --type-aware --fix --fix-dangerously
     options:

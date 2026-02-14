@@ -29,7 +29,10 @@
     "oxc/no-rest-spread-properties": "off",
     "react/only-export-components": ["off"],
     "oxc/no-async-await": "off",
-    "no-ternary": "off"
+    "no-ternary": "off",
+    "import/no-unassigned-import": "off",
+    "import/no-absolute-path": "off",
+    "no-void": "off"
   },
   "settings": {},
   "env": {
@@ -70,7 +73,9 @@
       "rules": {
         "import/no-anonymous-default-export": "off",
         "import/no-default-export": "off",
-        "import/unambiguous": "off"
+        "import/unambiguous": "off",
+        "no-commonjs": "off",
+        "no-magic-numbers": "off"
       }
     }
   ]

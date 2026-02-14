@@ -29,7 +29,7 @@ fileGroups:
     - /.prettierrc.json
 tasks:
   lint:
-    command: oxlint --type-aware --deny-warnings
+    command: oxlint --type-aware --deny-warnings --report-unused-disable-directives
   lint.fix:
     command: oxlint --type-aware --fix --fix-dangerously
     options:

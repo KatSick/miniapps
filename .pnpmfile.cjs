@@ -26,7 +26,6 @@ const readPackage = (pkg) => {
 
       // Remove the field if it's empty
       const fieldKeys = Object.keys(pkg[field]);
-      // oxlint-disable-next-line no-magic-numbers
       if (fieldKeys.length === 0) {
         delete pkg[field];
       }
@@ -36,7 +35,6 @@ const readPackage = (pkg) => {
   return pkg;
 };
 
-// oxlint-disable-next-line no-commonjs it only can be commonjs
 module.exports = {
   hooks: {
     readPackage,

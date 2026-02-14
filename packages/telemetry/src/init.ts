@@ -5,6 +5,5 @@ import { reportWebVitals } from "./web-vitals";
 
 export const initTracing = (config: TelemetryConfig): void => {
   const layer = createWebSdkLayer(config);
-  // oxlint-disable-next-line no-floating-promises
-  reportWebVitals(layer);
+  void reportWebVitals(layer);
 };

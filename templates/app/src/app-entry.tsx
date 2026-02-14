@@ -1,7 +1,7 @@
 import { Heading } from "@miniapps/design-system";
 
 export const App: React.FC = () => (
-  <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+  <div className="flex min-h-screen items-center justify-center bg-gray-50">
     <Heading level={1}>Hello World</Heading>
   </div>
 );

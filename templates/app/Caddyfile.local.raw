@@ -1,0 +1,10 @@
+{
+  auto_https off
+  # debug
+}
+
+{$DOMAIN_NAME} {
+  tls localhost.pem localhost.key
+  reverse_proxy /otlp* http://http-otel.localhost
+  reverse_proxy http://localhost:5173
+}

@@ -1,0 +1,17 @@
+services:
+  blog-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - PORT=3001
+    networks:
+      - traefik-network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.blog-api.rule=Host(`blog-api.localhost`)"
+      - "traefik.http.routers.blog-api.entrypoints=web"
+
+networks:
+  traefik-network:
+    external: true

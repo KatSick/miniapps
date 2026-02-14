@@ -1,7 +1,7 @@
 language: typescript
 tasks:
   dev:
-    command: node --watch dist/main.js
+    command: node --watch dist/main.mjs
     preset: server
     deps:
       - watch

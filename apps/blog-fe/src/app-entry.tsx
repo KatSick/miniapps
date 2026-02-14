@@ -1,51 +1,45 @@
-import viteLogo from "/vite.svg";
-import { Button, Code, Heading, Text } from "@miniapps/design-system";
-import { Effect } from "effect";
-import { useCallback, useState } from "react";
+import type { Post } from "@miniapps/blog-api-contracts";
 
-import reactLogo from "./assets/react.svg";
+import { Heading, Text } from "@miniapps/design-system";
+import { useCallback, useEffect, useState } from "react";
 
-const DEFAULT_COUNT = 0;
-const INCREMENT_BY = 1;
+import { getPosts } from "./api/posts";
+import { CreatePostForm } from "./create-post-form";
+import { PostsList } from "./posts-list";
+import { customRuntime } from "./runtime";
 
 export const App: React.FC = () => {
-  const [count, setCount] = useState(DEFAULT_COUNT);
-  const onClick = useCallback(async () => {
-    await Effect.runPromise(Effect.logFatal("test"));
-    setCount((count) => count + INCREMENT_BY);
-  }, [count]);
+  const [posts, setPosts] = useState<readonly Post[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
-  const handleClick = useCallback(() => {
-    void onClick();
-  }, [onClick]);
+  const fetchPosts = useCallback(async () => {
+    setLoading(true);
+    setError("");
+    try {
+      const result = await customRuntime.runPromise(getPosts());
+      setPosts(result);
+    } catch (error: unknown) {
+      setError(error instanceof Error ? error.message : "Failed to fetch posts");
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    void fetchPosts();
+  }, [fetchPosts]);
+
+  const onPostCreated = useCallback(() => {
+    void fetchPosts();
+  }, [fetchPosts]);
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-50 p-8">
-      <div className="mb-8 flex gap-8">
-        <a href="https://vite.dev">
-          <img
-            src={viteLogo}
-            className="h-24 w-24 transition-all duration-300 hover:scale-110 hover:drop-shadow-lg"
-            alt="Vite logo"
-          />
-        </a>
-        <a href="https://react.dev">
-          <img
-            src={reactLogo}
-            className="animate-spin-slow h-24 w-24 transition-all duration-300 hover:scale-110 hover:drop-shadow-lg"
-            alt="React logo"
-          />
-        </a>
-      </div>
-      <Heading level={1} className="mb-8">
-        Vite + React
-      </Heading>
-      <div className="flex flex-col items-center gap-6 rounded-lg bg-white p-8 text-center shadow-lg">
-        <Button onClick={handleClick}>count is {count}</Button>
-        <Text as="p">
-          Edit <Code>src/App.tsx</Code> and save to test HMR
-        </Text>
-      </div>
+    <div className="mx-auto flex min-h-screen max-w-2xl flex-col gap-8 p-8">
+      <Heading level={1}>Blog</Heading>
+      <CreatePostForm onPostCreated={onPostCreated} />
+      {error.length > 0 ? <Text className="text-red-500">{error}</Text> : false}
+      <PostsList loading={loading} posts={posts} />
     </div>
   );
 };

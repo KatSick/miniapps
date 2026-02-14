@@ -1,5 +1,10 @@
+id: miniapps
 tasks:
   lint:
+    args: --ignore-pattern 'templates/**'
+    options:
+      mergeArgs: prepend
+  lint.fix:
     args: --ignore-pattern 'templates/**'
     options:
       mergeArgs: prepend
@@ -9,3 +14,4 @@ tasks:
     command: oxfmt --write .
     options:
       runInCI: false
+      cache: false

@@ -1,18 +1,22 @@
 language: typescript
 tasks:
+  dev:
+    command: node --watch-preserve-output dist/main.mjs
+    preset: server
+    deps:
+      - watch
+      - blog-api-contracts:watch
   preview:
     command: docker compose up --build
     preset: server
     deps:
       - build
       - traefik:infra
-      - signoz:infra
 tags:
-  - vite
+  - tsdown
+  - vitest
 dependsOn:
   - blog-api-contracts
-  - design-system
-  - telemetry
 env:
-  DOMAIN_NAME: blog-fe.localhost
+  PORT: "3001"
 layer: application

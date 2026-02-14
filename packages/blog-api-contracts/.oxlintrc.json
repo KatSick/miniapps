@@ -1,13 +1,12 @@
 {
   "$schema": "../../node_modules/oxlint/configuration_schema.json",
   "extends": ["../../.oxlintrc.json"],
+  "rules": {
+    "new-cap": "off",
+    "max-classes-per-file": "off",
+    "import/group-exports": "off"
+  },
   "overrides": [
-    {
-      "files": ["src/**/*"],
-      "env": {
-        "browser": true
-      }
-    },
     {
       "files": ["tests/**/*"],
       "env": {

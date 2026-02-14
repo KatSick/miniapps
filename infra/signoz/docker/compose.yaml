@@ -187,6 +187,10 @@ services:
       - "traefik.http.routers.signoz-http-otel-collector-otlp.entrypoints=web"
       - "traefik.http.routers.signoz-http-otel-collector-otlp.middlewares=signoz-http-otel-collector-strip"
       - "traefik.http.routers.signoz-http-otel-collector-otlp.service=signoz-http-otel-collector"
+      - "traefik.http.routers.signoz-http-otel-collector-blog.rule=Host(`blog.localhost`) && PathPrefix(`/otlp`)"
+      - "traefik.http.routers.signoz-http-otel-collector-blog.entrypoints=web"
+      - "traefik.http.routers.signoz-http-otel-collector-blog.middlewares=signoz-http-otel-collector-strip"
+      - "traefik.http.routers.signoz-http-otel-collector-blog.service=signoz-http-otel-collector"
     depends_on:
       signoz:
         condition: service_healthy

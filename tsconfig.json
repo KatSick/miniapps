@@ -10,6 +10,12 @@
     },
     {
       "path": "packages/telemetry"
+    },
+    {
+      "path": "packages/blog-api-contracts"
+    },
+    {
+      "path": "apps/blog-api"
     }
   ],
   "compilerOptions": {

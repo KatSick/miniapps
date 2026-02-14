@@ -6,5 +6,9 @@
 {$DOMAIN_NAME} {
   tls localhost.pem localhost.key
   reverse_proxy /otlp* http://http-otel.localhost
+
+  handle_path /blog-api/* {
+    reverse_proxy http://localhost:3001
+  }
   reverse_proxy http://localhost:5173
 }

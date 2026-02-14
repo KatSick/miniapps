@@ -1,5 +1,3 @@
-import type { Resource } from "@effect/opentelemetry/Resource";
-import type { Layer } from "effect/Layer";
 import type { Metric as WebVitalMetric } from "web-vitals";
 
 import { Effect, Fiber, Match, Metric, MetricBoundaries } from "effect";
@@ -32,7 +30,7 @@ const createWebVitalEffect = (
     });
   });
 
-const grabWebVitals = Effect.fn("grabWebVitals")(function* grabWebVitals() {
+export const grabWebVitals = Effect.fn("grabWebVitals")(function* grabWebVitals() {
   yield* Effect.log("Grabbing web vitals");
 
   const metrics = [
@@ -47,7 +45,3 @@ const grabWebVitals = Effect.fn("grabWebVitals")(function* grabWebVitals() {
   yield* Fiber.await(fiber);
   yield* Effect.log("Web vitals completed");
 });
-
-export const reportWebVitals = async (layer: Layer<Resource>): Promise<void> => {
-  await Effect.runPromise(grabWebVitals().pipe(Effect.provide(layer)));
-};

@@ -1,11 +1,12 @@
 {
   "extends": "../../tsconfig.options.json",
   "compilerOptions": {
+    "resolveJsonModule": true,
     "paths": {
       "@/*": ["./src/*"],
       "@/package.json": ["./package.json"]
     },
-    "outDir": "../../.moon/cache/types/apps/blog-fe",
+    "outDir": "../../.moon/cache/types/apps/blog-api",
     "plugins": [
       {
         "name": "@effect/language-service"
@@ -16,9 +17,6 @@
   "references": [
     {
       "path": "../../packages/blog-api-contracts"
-    },
-    {
-      "path": "../../packages/design-system"
     },
     {
       "path": "../../packages/telemetry"

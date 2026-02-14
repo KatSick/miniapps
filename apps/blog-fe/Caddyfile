@@ -3,8 +3,6 @@
 }
 
 :80 {
-  reverse_proxy /otlp* http://http-otel.localhost
-  
   root * /srv
   try_files {path} /index.html
   file_server

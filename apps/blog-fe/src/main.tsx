@@ -1,12 +1,12 @@
+import { initTracing } from "@miniapps/telemetry";
 import { createRoot } from "react-dom/client";
 
 import { App } from "./app-entry";
-import { init } from "./web-vitals";
+import { name, version } from "@/package.json";
 // eslint-disable-next-line import/no-unassigned-import main css import
 import "./index.css";
 
-// oxlint-disable-next-line no-floating-promises
-init();
+initTracing({ serviceName: name, serviceVersion: version });
 
 const el = document.querySelector("#root");
 

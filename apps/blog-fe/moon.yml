@@ -11,6 +11,7 @@ tags:
   - vite
 dependsOn:
   - design-system
+  - telemetry
 env:
   DOMAIN_NAME: blog-fe.localhost
 layer: application

@@ -5,6 +5,8 @@ packages:
 catalog:
   '@effect/language-service': ^0.73.1
   '@effect/opentelemetry': ^0.61.0
+  '@effect/platform': ^0.94.5
+  '@effect/platform-node': ^0.104.1
   '@opentelemetry/exporter-logs-otlp-http': ^0.212.0
   '@opentelemetry/exporter-metrics-otlp-http': ^0.212.0
   '@opentelemetry/exporter-trace-otlp-http': ^0.212.0
@@ -25,7 +27,7 @@ catalog:
   '@vitest/ui': ^4.0.18
   class-variance-authority: ^0.7.1
   clsx: ^2.1.1
-  effect: ^3.19.16
+  effect: ^3.19.17
   globals: ^17.3.0
   lucide-react: ^0.564.0
   oxfmt: ^0.32.0

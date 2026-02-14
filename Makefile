@@ -6,7 +6,7 @@ ci:
 up:
 	proto outdated --latest --update --yes && \
 	proto install && \
-	pnpm up --latest --interactive --recursive && \
+	pnpm up --latest --recursive && \
 	pnpm dedupe && \
 	moon ci
 

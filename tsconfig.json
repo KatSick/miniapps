@@ -7,6 +7,9 @@
     },
     {
       "path": "packages/design-system"
+    },
+    {
+      "path": "packages/telemetry"
     }
   ],
   "compilerOptions": {

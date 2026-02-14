@@ -1,0 +1,4 @@
+language: typescript
+tags:
+  - tsdown
+layer: library

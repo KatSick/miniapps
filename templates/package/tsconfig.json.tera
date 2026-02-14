@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.options.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/package.json": ["./package.json"]
+    },
+    "noEmit": false,
+    "outDir": "../../.moon/cache/types/packages/{{ name }}"
+  },
+  "include": ["src", "tests"]
+}

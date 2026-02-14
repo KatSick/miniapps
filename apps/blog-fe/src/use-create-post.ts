@@ -1,0 +1,69 @@
+import { Effect } from "effect";
+import { useCallback, useState } from "react";
+
+import { blogApiClient } from "./api/client";
+
+interface UseCreatePostReturn {
+  content: string;
+  error: string;
+  isSubmitting: boolean;
+  onContentChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  onSubmit: (event: React.SyntheticEvent<HTMLFormElement>) => void;
+  onTitleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  title: string;
+}
+
+const submitPost = async (title: string, content: string): Promise<void> => {
+  const client = await Effect.runPromise(blogApiClient);
+  await Effect.runPromise(client.posts.createPost({ payload: { content, title } }));
+};
+
+export const useCreatePost = (onPostCreated: () => void): UseCreatePostReturn => {
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
+
+  const resetForm = useCallback(() => {
+    setTitle("");
+    setContent("");
+    onPostCreated();
+  }, [onPostCreated]);
+
+  const handleSubmit = useCallback(
+    async (event: React.SyntheticEvent<HTMLFormElement>) => {
+      event.preventDefault();
+      if (title.trim().length === 0 || content.trim().length === 0) {
+        return;
+      }
+      setIsSubmitting(true);
+      setError("");
+      try {
+        await submitPost(title.trim(), content.trim());
+        resetForm();
+      } catch (error: unknown) {
+        setError(error instanceof Error ? error.message : "Failed to create post");
+      } finally {
+        setIsSubmitting(false);
+      }
+    },
+    [title, content, resetForm],
+  );
+
+  const onSubmit = useCallback(
+    (event: React.SyntheticEvent<HTMLFormElement>) => {
+      void handleSubmit(event);
+    },
+    [handleSubmit],
+  );
+
+  const onTitleChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+    setTitle(event.target.value);
+  }, []);
+
+  const onContentChange = useCallback((event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setContent(event.target.value);
+  }, []);
+
+  return { content, error, isSubmitting, onContentChange, onSubmit, onTitleChange, title };
+};

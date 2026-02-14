@@ -1,0 +1,17 @@
+language: typescript
+tasks:
+  preview:
+    command: docker compose up --build
+    preset: server
+    deps:
+      - build
+      - traefik:infra
+      - signoz:infra
+tags:
+  - vite
+dependsOn:
+  - design-system
+  - telemetry
+env:
+  DOMAIN_NAME: {{ name }}.localhost
+layer: application

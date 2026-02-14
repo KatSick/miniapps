@@ -1,0 +1,15 @@
+services:
+  {{ name }}:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - traefik-network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.{{ name }}.rule=Host(`{{ domain }}.localhost`)"
+      - "traefik.http.routers.{{ name }}.entrypoints=web"
+
+networks:
+  traefik-network:
+    external: true

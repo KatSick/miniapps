@@ -16,9 +16,13 @@ apps/
   blog-fe/           # React 19 + Vite frontend application
 packages/
   design-system/     # React component library (tsdown build, Storybook docs)
+  telemetry/         # Shared OpenTelemetry + web vitals package (Effect-based)
+templates/
+  app/               # Moon codegen template for new Vite + React apps
+  package/           # Moon codegen template for new tsdown library packages
 ```
 
-The blog-fe app depends on the design-system package via `"@miniapps/design-system": "workspace:*"`.
+The blog-fe app depends on the design-system and telemetry packages via `"workspace:*"`.
 
 ## Commands
 
@@ -56,6 +60,13 @@ moonx :build           # Build all projects
 moonx blog-fe:build    # Build specific project
 ```
 
+### Scaffolding
+
+```bash
+moon generate app      # Scaffold a new Vite + React app (prompts for name, title, domain)
+moon generate package  # Scaffold a new tsdown library package (prompts for name)
+```
+
 ### CI & Maintenance
 
 ```bash
@@ -73,7 +84,7 @@ Moon tasks follow `moon <project>:<task>` syntax. Use `:task` (without project) 
 - **Formatting**: Uses oxfmt (not Prettier) - 100 char line width, 2-space indent
 - **Linting**: Uses oxlint (not ESLint) with `--type-aware` flag
 - **Testing**: Vitest with Playwright browser runner for component tests
-- **Observability**: OpenTelemetry integration in blog-fe (traces, metrics, logs via effect-ts)
+- **Observability**: `@miniapps/telemetry` package provides OpenTelemetry integration (traces, metrics, logs, web vitals via Effect)
 - **Component patterns**: Shadcn/ui-style components using class-variance-authority and Radix UI primitives
 
 Design system exports: React components, utility functions, and Tailwind CSS via separate entry points.

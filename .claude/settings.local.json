@@ -28,7 +28,12 @@
       "Bash(git -C /Users/katsick/Projects/miniapps/.worktrees/terminal-design-system diff --stat)",
       "Bash(git -C /Users/katsick/Projects/miniapps/.worktrees/terminal-design-system log --oneline -5)",
       "Bash(git -C /Users/katsick/Projects/miniapps/.worktrees/terminal-design-system add packages/design-system/src/components/base/input/)",
-      "Bash(git -C /Users/katsick/Projects/miniapps/.worktrees/terminal-design-system commit -m \"$\\(cat <<''EOF''\nfeat\\(design-system\\): add Input component\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+      "Bash(git -C /Users/katsick/Projects/miniapps/.worktrees/terminal-design-system commit -m \"$\\(cat <<''EOF''\nfeat\\(design-system\\): add Input component\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "mcp__acp__Edit",
+      "mcp__acp__Bash",
+      "Skill(commit-commands:commit-push-pr)",
+      "Skill(commit-commands:commit-push-pr:*)",
+      "WebFetch(domain:moonrepo.dev)"
     ]
   }
 }

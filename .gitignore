@@ -128,3 +128,6 @@ ee/query-service/db
 
 *.key
 *.pem
+
+# Claude Code local settings
+.claude/settings.local.json

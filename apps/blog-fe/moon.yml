@@ -11,8 +11,6 @@ tags:
   - vite
 dependsOn:
   - design-system
-  - signoz
-  - traefik
 env:
   DOMAIN_NAME: blog-fe.localhost
 layer: application

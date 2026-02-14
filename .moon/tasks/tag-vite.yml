@@ -16,7 +16,7 @@ tasks:
     options:
       runInCI: false
   mkcert:
-    command: mkcert -key-file localhost.key -cert-file localhost.pem $DOMAIN_NAME
+    script: mkcert -key-file localhost.key -cert-file localhost.pem $DOMAIN_NAME
     outputs:
       - localhost.key
       - localhost.pem

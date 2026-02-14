@@ -1,17 +1,17 @@
-$schema: "./cache/schemas/tasks.json"
-
+$schema: ./cache/schemas/tasks.json
 tasks:
   build:
-    command: "tsdown"
+    command: tsdown
     inputs:
       - "@group(tsdown)"
       - "@group(sources)"
     outputs:
-      - "dist"
+      - dist
     deps:
-      - "lint"
-      - "types"
-
+      - lint
+      - types
   watch:
-    command: "tsdown --watch --no-clean"
-    local: true
+    command: tsdown --watch --no-clean
+    preset: server
+inheritedBy:
+  tag: tsdown

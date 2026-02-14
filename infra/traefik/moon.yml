@@ -1,9 +1,10 @@
 tasks:
   create:
-    command: "docker network create traefik-network || true"
-
+    script: docker network create traefik-network || true
+    options:
+      runInCI: false
   infra:
-    command: "docker compose up --build"
-    preset: "server"
+    command: docker compose up --build
+    preset: server
     deps:
       - create

@@ -30,7 +30,11 @@ jobs:
       #     restore-keys: |
       #       ${{ runner.os }}-pnpm-store-
 
-      - run: "MOON_REMOTE_HOST=grpcs://remote.buildbuddy.io BUILDBUDDY_API_KEY=${{secrets.BUILDBUDDY_API_KEY}} moon ci"
+      - name: "Run CI"
+        run: "moon ci"
+        env:
+          MOON_REMOTE_HOST: ${{ secrets.BUILDBUDDY_API_KEY && 'grpcs://remote.buildbuddy.io' || '' }}
+          BUILDBUDDY_API_KEY: ${{ secrets.BUILDBUDDY_API_KEY }}
       - run: "pnpm dedupe --check"
 
       - name: "Collect/retrospect on results"

@@ -1,7 +1,7 @@
 import type { TelemetryConfig } from "./tracing";
 
+import { reportWebVitals } from "./browser/web-vitals";
 import { createWebSdkLayer } from "./tracing";
-import { reportWebVitals } from "./web-vitals";
 
 export const initTracing = (config: TelemetryConfig): void => {
   const layer = createWebSdkLayer(config);

@@ -4,6 +4,8 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@effect/platform": "catalog:",
+    "@miniapps/blog-api-contracts": "workspace:*",
     "@miniapps/design-system": "workspace:*",
     "@miniapps/telemetry": "workspace:*",
     "@radix-ui/react-slot": "catalog:",

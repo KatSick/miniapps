@@ -10,6 +10,7 @@ tasks:
 tags:
   - vite
 dependsOn:
+  - blog-api-contracts
   - design-system
   - telemetry
 env:

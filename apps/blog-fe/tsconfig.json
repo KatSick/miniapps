@@ -15,6 +15,9 @@
   "include": ["src", "tests", "package.json"],
   "references": [
     {
+      "path": "../../packages/blog-api-contracts"
+    },
+    {
       "path": "../../packages/design-system"
     },
     {

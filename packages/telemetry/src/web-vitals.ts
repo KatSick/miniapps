@@ -1,10 +1,9 @@
 // oxlint-disable no-magic-numbers
 import type { Metric as WebVitalMetric } from "web-vitals";
+import type { Layer } from "effect/Layer";
 
 import { Effect, Fiber, Match, Metric, MetricBoundaries } from "effect";
 import { onCLS, onFCP, onINP, onLCP, onTTFB } from "web-vitals";
-
-import { WebSdkLive } from "./tracing";
 
 const lcpMetric = Metric.histogram("lcp", MetricBoundaries.fromIterable([0, 2500, 4000, 6000]));
 const inpMetric = Metric.histogram("inp", MetricBoundaries.fromIterable([0, 200, 500, 1000]));
@@ -33,7 +32,7 @@ const createWebVitalEffect = (
     });
   });
 
-const grabWebVitals = Effect.fn("sendToAnalytics")(function* grabWebVitals() {
+const grabWebVitals = Effect.fn("grabWebVitals")(function* grabWebVitals() {
   yield* Effect.log("Grabbing web vitals");
 
   const metrics = [
@@ -49,6 +48,8 @@ const grabWebVitals = Effect.fn("sendToAnalytics")(function* grabWebVitals() {
   yield* Effect.log("Web vitals completed");
 });
 
-export const init = async (): Promise<void> => {
-  await Effect.runPromise(grabWebVitals().pipe(Effect.provide(WebSdkLive)));
+// oxlint-disable-next-line no-explicit-any
+export const reportWebVitals = async (layer: Layer<any>): Promise<void> => {
+  // oxlint-disable-next-line no-unsafe-argument
+  await Effect.runPromise(grabWebVitals().pipe(Effect.provide(layer)));
 };

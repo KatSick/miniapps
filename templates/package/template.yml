@@ -1,11 +1,11 @@
-title: "package"
-destination: "packages/[name]"
+title: package
 description: |
-  Scaffolds the initial structure for an npm package,
-  including source and test folders, a package.json, and more.
+  Scaffolds a new library package with tsdown build,
+  vitest browser tests, and standard project configuration.
+destination: "packages/[name]"
 variables:
   name:
-    type: "string"
+    type: string
     default: ""
     required: true
-    prompt: "Package name?"
+    prompt: "Package name? (without @miniapps/ prefix)"

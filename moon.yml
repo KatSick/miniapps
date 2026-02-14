@@ -1,4 +1,8 @@
 tasks:
+  lint:
+    args: --ignore-pattern 'templates/**'
+    options:
+      mergeArgs: prepend
   fmt:
     command: oxfmt --check .
   fmt.fix:

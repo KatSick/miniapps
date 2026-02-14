@@ -13,5 +13,5 @@ dependsOn:
   - design-system
   - telemetry
 env:
-  DOMAIN_NAME: blog-fe.localhost
+  DOMAIN_NAME: {{ name }}.localhost
 layer: application

@@ -5,7 +5,7 @@
       "@/*": ["./src/*"],
       "@/package.json": ["./package.json"]
     },
-    "outDir": "../../.moon/cache/types/apps/blog-fe",
+    "outDir": "../../.moon/cache/types/apps/{{ name }}",
     "plugins": [
       {
         "name": "@effect/language-service"

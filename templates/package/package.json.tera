@@ -1,7 +1,14 @@
 {
-  "name": "{{name}}",
-  "private": true,
+  "name": "@miniapps/{{ name }}",
   "version": "0.0.0",
+  "private": true,
   "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
   "dependencies": {}
 }

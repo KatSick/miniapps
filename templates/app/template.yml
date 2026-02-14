@@ -1,0 +1,21 @@
+title: app
+description: |
+  Scaffolds a new Vite + React application with Tailwind CSS,
+  design system integration, telemetry, and deployment setup.
+destination: "apps/[name]"
+variables:
+  name:
+    type: string
+    default: ""
+    required: true
+    prompt: "App name? (e.g. dashboard-fe)"
+  title:
+    type: string
+    default: ""
+    required: true
+    prompt: "App title? (e.g. Dashboard, used in HTML <title>)"
+  domain:
+    type: string
+    default: ""
+    required: true
+    prompt: "Domain prefix? (e.g. dashboard, for dashboard.localhost)"

@@ -1,4 +1,5 @@
 language: typescript
 tags:
   - tsdown
+  - vitest
 layer: library

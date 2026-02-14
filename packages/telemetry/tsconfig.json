@@ -8,5 +8,5 @@
     "noEmit": false,
     "outDir": "../../.moon/cache/types/packages/telemetry"
   },
-  "include": ["src"]
+  "include": ["src", "tests"]
 }

@@ -3,9 +3,10 @@ import { createRoot } from "react-dom/client";
 
 import { App } from "./app-entry";
 import { name, version } from "@/package.json";
-// eslint-disable-next-line import/no-unassigned-import main css import
+// oxlint-disable-next-line import/no-unassigned-import -- main css import
 import "./index.css";
 
+// oxlint-disable-next-line no-unsafe-call -- cross-package type resolution
 initTracing({ serviceName: name, serviceVersion: version });
 
 const el = document.querySelector("#root");

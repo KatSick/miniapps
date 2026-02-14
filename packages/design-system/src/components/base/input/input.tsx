@@ -1,4 +1,3 @@
-// oxlint-disable jsx-props-no-spreading
 import type { ComponentProps, ReactElement } from "react";
 
 import { cn } from "@/lib/utils";

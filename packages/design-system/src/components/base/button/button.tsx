@@ -1,4 +1,3 @@
-// oxlint-disable jsx-props-no-spreading
 import type { VariantProps } from "class-variance-authority";
 import type { ComponentProps, ReactElement } from "react";
 

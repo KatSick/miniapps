@@ -1,6 +1,6 @@
 import type { Preview } from "@storybook/react-vite";
 
-// eslint-disable-next-line import/no-unassigned-import main css import
+// oxlint-disable-next-line import/no-unassigned-import -- main css import
 import "@/setup-styles";
 
 const preview: Preview = {

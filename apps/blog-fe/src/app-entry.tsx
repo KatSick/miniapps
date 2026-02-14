@@ -2,7 +2,7 @@ import { Button, Code, Heading, Text } from "@miniapps/design-system";
 import { useCallback, useState } from "react";
 
 import reactLogo from "./assets/react.svg";
-// eslint-disable-next-line import/no-absolute-path vite specifics
+// oxlint-disable-next-line import/no-absolute-path -- vite specifics
 import viteLogo from "/vite.svg";
 import { Effect } from "effect";
 

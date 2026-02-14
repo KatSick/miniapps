@@ -1,4 +1,3 @@
-// oxlint-disable no-magic-numbers
 import type { Metric as WebVitalMetric } from "web-vitals";
 import type { Layer } from "effect/Layer";
 

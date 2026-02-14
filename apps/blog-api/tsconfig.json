@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.options.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/package.json": ["./package.json"]
+    },
+    "outDir": "../../.moon/cache/types/apps/blog-api",
+    "plugins": [
+      {
+        "name": "@effect/language-service"
+      }
+    ]
+  },
+  "include": ["src", "tests"],
+  "references": [
+    {
+      "path": "../../packages/blog-api-contracts"
+    }
+  ]
+}

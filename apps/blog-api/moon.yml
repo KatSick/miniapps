@@ -1,0 +1,22 @@
+language: typescript
+tasks:
+  dev:
+    command: node --watch dist/main.js
+    preset: server
+    deps:
+      - watch
+      - blog-api-contracts:watch
+  preview:
+    command: docker compose up --build
+    preset: server
+    deps:
+      - build
+      - traefik:infra
+tags:
+  - tsdown
+  - vitest
+dependsOn:
+  - blog-api-contracts
+env:
+  PORT: "3001"
+layer: application

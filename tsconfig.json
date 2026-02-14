@@ -13,6 +13,9 @@
     },
     {
       "path": "packages/blog-api-contracts"
+    },
+    {
+      "path": "apps/blog-api"
     }
   ],
   "compilerOptions": {

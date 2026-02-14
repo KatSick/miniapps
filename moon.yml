@@ -1,3 +1,4 @@
+id: miniapps
 tasks:
   lint:
     args: --ignore-pattern 'templates/**'

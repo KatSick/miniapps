@@ -1,4 +1,4 @@
-from node:22-alpine as base
+from node:25.6.1-alpine as base
 
 workdir /app
 copy dist/ ./dist/

@@ -1,7 +1,7 @@
 import { Effect } from "effect";
 import { useCallback, useState } from "react";
 
-import { blogApiClient } from "./api/client";
+import { submitPost } from "./api/posts";
 
 interface UseCreatePostReturn {
   content: string;
@@ -12,11 +12,6 @@ interface UseCreatePostReturn {
   onTitleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   title: string;
 }
-
-const submitPost = async (title: string, content: string): Promise<void> => {
-  const client = await Effect.runPromise(blogApiClient);
-  await Effect.runPromise(client.posts.createPost({ payload: { content, title } }));
-};
 
 export const useCreatePost = (onPostCreated: () => void): UseCreatePostReturn => {
   const [title, setTitle] = useState("");
@@ -39,7 +34,7 @@ export const useCreatePost = (onPostCreated: () => void): UseCreatePostReturn =>
       setIsSubmitting(true);
       setError("");
       try {
-        await submitPost(title.trim(), content.trim());
+        await Effect.runPromise(submitPost(title.trim(), content.trim()));
         resetForm();
       } catch (error: unknown) {
         setError(error instanceof Error ? error.message : "Failed to create post");

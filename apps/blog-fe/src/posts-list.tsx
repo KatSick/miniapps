@@ -6,7 +6,7 @@ import { PostsContent } from "./posts-content";
 
 export const PostsList: React.FC<{
   loading: boolean;
-  posts: readonly (typeof Post.Type)[];
+  posts: readonly Post[];
 }> = ({ loading, posts }) => (
   <div className="flex flex-col gap-4">
     <Heading level={2}>Posts</Heading>

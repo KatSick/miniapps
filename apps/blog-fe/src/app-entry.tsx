@@ -4,12 +4,12 @@ import { Heading, Text } from "@miniapps/design-system";
 import { Effect } from "effect";
 import { useCallback, useEffect, useState } from "react";
 
-import { blogApiClient } from "./api/client";
+import { getPosts } from "./api/posts";
 import { CreatePostForm } from "./create-post-form";
 import { PostsList } from "./posts-list";
 
 export const App: React.FC = () => {
-  const [posts, setPosts] = useState<readonly (typeof Post.Type)[]>([]);
+  const [posts, setPosts] = useState<readonly Post[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -17,8 +17,7 @@ export const App: React.FC = () => {
     setLoading(true);
     setError("");
     try {
-      const client = await Effect.runPromise(blogApiClient);
-      const result = await Effect.runPromise(client.posts.listPosts());
+      const result = await Effect.runPromise(getPosts());
       setPosts(result);
     } catch (error: unknown) {
       setError(error instanceof Error ? error.message : "Failed to fetch posts");

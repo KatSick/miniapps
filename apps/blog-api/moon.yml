@@ -1,7 +1,7 @@
 language: typescript
 tasks:
   dev:
-    command: node --watch dist/main.mjs
+    command: node --watch-preserve-output dist/main.mjs
     preset: server
     deps:
       - watch

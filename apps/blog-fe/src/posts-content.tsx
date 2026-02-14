@@ -6,7 +6,7 @@ import { PostCard } from "./post-card";
 
 export const PostsContent: React.FC<{
   loading: boolean;
-  posts: readonly (typeof Post.Type)[];
+  posts: readonly Post[];
 }> = ({ loading, posts }) => {
   if (loading) {
     return <Text>Loading...</Text>;

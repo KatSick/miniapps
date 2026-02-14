@@ -13,9 +13,7 @@
 
 ## To run (and see) OTEL
 
-- Run `git clone -b main https://github.com/SigNoz/signoz.git && cd signoz/deploy/docker`
-- Run `docker compose up`
-- Go to http://localhost:8080/, register and login
+- Run `moonx :infra` to start the observability stack
 
 ## quirks for Windows
 

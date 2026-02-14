@@ -11,10 +11,10 @@ up:
 	moon ci
 
 dev:
-	moon :dev
+	moonx :dev
 
 infra:
-	moon :infra
+	moonx :infra
 
 preview:
-	moon :preview
+	moonx :preview

@@ -42,7 +42,7 @@ Do not attempt to poll or wait for CI results. After pushing a branch and creati
 
 ## CLI & Shell Commands
 
-For interactive CLI tools (e.g., `pnpm update`, `moon migrate`), always use non-interactive/batch flags (e.g., `--yes`, `--latest`) instead of trying to pipe input or poll for interactive prompts.
+For interactive CLI tools (e.g., `pnpm update`, `moonx migrate`), always use non-interactive/batch flags (e.g., `--yes`, `--latest`) instead of trying to pipe input or poll for interactive prompts.
 
 ## Commands
 
@@ -83,21 +83,21 @@ moonx blog-fe:build    # Build specific project
 ### Scaffolding
 
 ```bash
-moon generate app      # Scaffold a new Vite + React app (prompts for name, title, domain)
-moon generate package  # Scaffold a new tsdown library package (prompts for name)
+moonx generate app      # Scaffold a new Vite + React app (prompts for name, title, domain)
+moonx generate package  # Scaffold a new tsdown library package (prompts for name)
 ```
 
 ### CI & Maintenance
 
 ```bash
-moon ci               # Full CI pipeline (lint, fmt, types, build, test)
-make ci               # Clean install + moon ci
+moonx ci               # Full CI pipeline (lint, fmt, types, build, test)
+make ci               # Clean install + moonx ci
 make up               # Update all dependencies interactively
 ```
 
 ### Task Syntax
 
-Moon tasks follow `moon <project>:<task>` syntax. Use `:task` (without project) to run across all applicable projects.
+Moon tasks follow `moonx <project>:<task>` syntax. Use `moonx :task` (without project) to run across all applicable projects.
 
 ## Architecture Notes
 

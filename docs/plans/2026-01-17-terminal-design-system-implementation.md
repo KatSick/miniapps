@@ -212,7 +212,7 @@ Add to `<head>`:
 
 **Step 2: Verify dev server works**
 
-Run: `moon :dev`
+Run: `moonx :dev`
 Expected: App loads with new fonts
 
 **Step 3: Commit**
@@ -1722,7 +1722,7 @@ export const App: React.FC = () => {
 
 **Step 2: Verify dev server**
 
-Run: `moon :dev`
+Run: `moonx :dev`
 Expected: Blog renders with terminal styling
 
 **Step 3: Commit**

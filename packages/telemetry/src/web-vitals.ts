@@ -1,6 +1,6 @@
-// oxlint-disable no-magic-numbers
-import type { Metric as WebVitalMetric } from "web-vitals";
+import type { Resource } from "@effect/opentelemetry/Resource";
 import type { Layer } from "effect/Layer";
+import type { Metric as WebVitalMetric } from "web-vitals";
 
 import { Effect, Fiber, Match, Metric, MetricBoundaries } from "effect";
 import { onCLS, onFCP, onINP, onLCP, onTTFB } from "web-vitals";
@@ -48,8 +48,6 @@ const grabWebVitals = Effect.fn("grabWebVitals")(function* grabWebVitals() {
   yield* Effect.log("Web vitals completed");
 });
 
-// oxlint-disable-next-line no-explicit-any
-export const reportWebVitals = async (layer: Layer<any>): Promise<void> => {
-  // oxlint-disable-next-line no-unsafe-argument
+export const reportWebVitals = async (layer: Layer<Resource>): Promise<void> => {
   await Effect.runPromise(grabWebVitals().pipe(Effect.provide(layer)));
 };

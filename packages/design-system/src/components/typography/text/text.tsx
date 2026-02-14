@@ -1,4 +1,3 @@
-// oxlint-disable jsx-props-no-spreading
 import type { VariantProps } from "class-variance-authority";
 import type { ComponentProps, ReactElement } from "react";
 
@@ -19,7 +18,7 @@ const textVariants = cva("font-sans leading-[1.6]", {
     variant: {
       default: "text-text",
       muted: "text-text-muted",
-      strong: "text-text-strong font-medium",
+      strong: "font-medium text-text-strong",
     },
   },
 });

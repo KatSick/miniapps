@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Architecture Overview
+
+This is a monorepo using Moon (v2) as the build system, pnpm as the package manager, TypeScript as the primary language, and Vite for bundling. YAML is used extensively for Moon task/project configs.
+
 ## Project Overview
 
 This is a TypeScript/React monorepo using:
@@ -23,6 +27,22 @@ templates/
 ```
 
 The blog-fe app depends on the design-system and telemetry packages via `"workspace:*"`.
+
+## Git Conventions
+
+NEVER use `--no-verify` when committing. Always let pre-commit hooks run.
+
+When using `git add` in worktrees, NEVER use `git add -A`. Always use `git add` with specific file paths to avoid accidentally staging deletions of files from other worktrees (e.g., pre-commit hooks).
+
+When creating PRs, always use the worktree workflow: create a worktree for the branch, make changes there, commit, push, and open the PR. Do not commit directly to main.
+
+### CI
+
+Do not attempt to poll or wait for CI results. After pushing a branch and creating a PR, report the PR URL and let the user check CI status themselves.
+
+## CLI & Shell Commands
+
+For interactive CLI tools (e.g., `pnpm update`, `moon migrate`), always use non-interactive/batch flags (e.g., `--yes`, `--latest`) instead of trying to pipe input or poll for interactive prompts.
 
 ## Commands
 

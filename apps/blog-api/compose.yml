@@ -11,6 +11,10 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.blog-api.rule=Host(`blog-api.localhost`)"
       - "traefik.http.routers.blog-api.entrypoints=web"
+      - "traefik.http.routers.blog-api-path.rule=Host(`blog.localhost`) && PathPrefix(`/blog-api`)"
+      - "traefik.http.routers.blog-api-path.entrypoints=web"
+      - "traefik.http.middlewares.blog-api-strip.stripprefix.prefixes=/blog-api"
+      - "traefik.http.routers.blog-api-path.middlewares=blog-api-strip"
 
 networks:
   traefik-network:

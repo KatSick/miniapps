@@ -1,7 +1,7 @@
-import { Effect } from "effect";
 import { useCallback, useState } from "react";
 
 import { submitPost } from "./api/posts";
+import { customRuntime } from "./runtime";
 
 interface UseCreatePostReturn {
   content: string;
@@ -34,7 +34,7 @@ export const useCreatePost = (onPostCreated: () => void): UseCreatePostReturn =>
       setIsSubmitting(true);
       setError("");
       try {
-        await Effect.runPromise(submitPost(title.trim(), content.trim()));
+        await customRuntime.runPromise(submitPost(title.trim(), content.trim()));
         resetForm();
       } catch (error: unknown) {
         setError(error instanceof Error ? error.message : "Failed to create post");

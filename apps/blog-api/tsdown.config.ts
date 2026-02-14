@@ -4,6 +4,7 @@ export default defineConfig([
   {
     dts: false,
     entry: ["./src/main.ts"],
+    noExternal: [/.*/],
     platform: "node",
   },
 ]);

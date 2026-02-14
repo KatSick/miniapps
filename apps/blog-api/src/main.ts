@@ -10,7 +10,7 @@ import { BlogApiLive } from "@/server";
 const port = Number(process.env["PORT"] ?? 3001);
 
 // oxlint-disable-next-line node/no-process-env -- Entry point reads OTEL_ENDPOINT from environment
-const otelEndpoint = process.env["OTEL_ENDPOINT"] ?? "http://localhost:4318";
+const otelEndpoint = process.env["OTEL_ENDPOINT"] ?? "http://http-otel.localhost";
 
 const TelemetryLive = createNodeSdkLayer({
   endpoint: otelEndpoint,

@@ -6,8 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a TypeScript/React monorepo using:
 
-- **pnpm** for package management with workspaces
-- **Moon** as the build orchestrator and task runner
+- **Moon** as the build orchestrator and task runner (auto-executes pnpm install, etc)
 - **proto** for tool version management (auto-installs Node, pnpm, Moon)
 
 ### Structure
@@ -23,39 +22,38 @@ The blog-fe app depends on the design-system package via `"@miniapps/design-syst
 
 ## Commands
 
-**Always use `moon ci` to verify changes before committing.**
+**Always use `moonx :test :lint :fmt :build :types` to verify changes before committing.**
 
 ### Development
 
 ```bash
-pnpm install          # Install dependencies (required first)
-moon :dev             # Run blog-fe dev server
-moon design-system:watch  # Watch library changes during development
+moonx :dev             # Run blog-fe dev server
+moonx design-system:watch  # Watch library changes during development
 ```
 
 ### Linting, Formatting, and Type Checking
 
 ```bash
-moon :lint            # Lint all projects (oxlint)
-moon :lint.fix        # Fix linting issues
-moon :fmt             # Check formatting (oxfmt)
-moon :fmt.fix         # Fix formatting
-moon :types           # Type check
+moonx :lint            # Lint all projects (oxlint)
+moonx :lint.fix        # Fix linting issues
+moonx :fmt             # Check formatting (oxfmt)
+moonx :fmt.fix         # Fix formatting
+moonx :types           # Type check
 ```
 
 ### Testing
 
 ```bash
-moon :test            # Run tests (Vitest with headless browser)
-moon :test.watch      # Run tests in watch mode
-moon design-system:test   # Run specific project tests
+moonx :test            # Run tests (Vitest with headless browser)
+moonx :test.watch      # Run tests in watch mode
+moonx design-system:test   # Run specific project tests
 ```
 
 ### Building
 
 ```bash
-moon :build           # Build all projects
-moon blog-fe:build    # Build specific project
+moonx :build           # Build all projects
+moonx blog-fe:build    # Build specific project
 ```
 
 ### CI & Maintenance

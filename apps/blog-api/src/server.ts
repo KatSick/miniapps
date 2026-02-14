@@ -12,7 +12,6 @@ const BlogApiImplementation = HttpApiBuilder.api(BlogApi).pipe(
 
 export const BlogApiLive = HttpApiBuilder.serve(HttpMiddleware.logger).pipe(
   Layer.provide(HttpApiSwagger.layer({ path: "/docs" })),
-  Layer.provide(HttpApiBuilder.middlewareCors()),
   Layer.provide(BlogApiImplementation),
   HttpServer.withLogAddress,
 );

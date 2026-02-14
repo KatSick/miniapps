@@ -3,7 +3,6 @@ import { defineConfig } from "tsdown";
 export default defineConfig([
   {
     dts: true,
-    entry: ["./src/index.ts"],
-    platform: "browser",
+    entry: ["./src/browser/index.ts", "./src/node/index.ts"],
   },
 ]);

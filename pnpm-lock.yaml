@@ -12,6 +12,9 @@ catalogs:
     '@effect/opentelemetry':
       specifier: ^0.61.0
       version: 0.61.0
+    '@effect/platform':
+      specifier: ^0.94.5
+      version: 0.94.5
     '@opentelemetry/exporter-logs-otlp-http':
       specifier: ^0.212.0
       version: 0.212.0
@@ -247,6 +250,15 @@ importers:
         specifier: 'catalog:'
         version: 0.73.1
 
+  packages/blog-api-contracts:
+    dependencies:
+      '@effect/platform':
+        specifier: 'catalog:'
+        version: 0.94.5(effect@3.19.17)
+      effect:
+        specifier: 'catalog:'
+        version: 3.19.17
+
   packages/design-system:
     dependencies:
       '@radix-ui/react-slot':
@@ -287,7 +299,7 @@ importers:
     dependencies:
       '@effect/opentelemetry':
         specifier: 'catalog:'
-        version: 0.61.0(@effect/platform@0.94.0(effect@3.19.17))(@opentelemetry/api@1.9.0)(@opentelemetry/resources@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-logs@0.212.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-node@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-web@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.39.0)(effect@3.19.17)
+        version: 0.61.0(@effect/platform@0.94.5(effect@3.19.17))(@opentelemetry/api@1.9.0)(@opentelemetry/resources@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-logs@0.212.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-node@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-web@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.39.0)(effect@3.19.17)
       '@opentelemetry/exporter-logs-otlp-http':
         specifier: 'catalog:'
         version: 0.212.0(@opentelemetry/api@1.9.0)
@@ -438,10 +450,10 @@ packages:
       '@opentelemetry/semantic-conventions': ^1.33.0
       effect: ^3.19.15
 
-  '@effect/platform@0.94.0':
-    resolution: {integrity: sha512-oIATd3M+RUe2q+bu0Qpgt4/qSbXBM9OEGBrRW7SvtwXGOWkCYkN+LfOPnmPrbMB7jYjpIb7808T1bONM1Nwgfg==}
+  '@effect/platform@0.94.5':
+    resolution: {integrity: sha512-z05APUiDDPbodhTkH/RJqOLoCU11bU2IZLfcwLFrld03+ob1VeqRnELQlmueLIYm6NZifHAtjl32V+GRt34y4A==}
     peerDependencies:
-      effect: ^3.19.13
+      effect: ^3.19.17
 
   '@emnapi/core@1.8.1':
     resolution: {integrity: sha512-AvT9QFpxK0Zd8J0jopedNm+w/2fIzvtPKPjqyw9jwvBaReTTqPBk9Hixaz7KbjimP+QNz605/XnjFcDAL2pqBg==}
@@ -2636,9 +2648,9 @@ snapshots:
 
   '@effect/language-service@0.73.1': {}
 
-  '@effect/opentelemetry@0.61.0(@effect/platform@0.94.0(effect@3.19.17))(@opentelemetry/api@1.9.0)(@opentelemetry/resources@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-logs@0.212.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-node@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-web@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.39.0)(effect@3.19.17)':
+  '@effect/opentelemetry@0.61.0(@effect/platform@0.94.5(effect@3.19.17))(@opentelemetry/api@1.9.0)(@opentelemetry/resources@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-logs@0.212.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-node@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-web@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.39.0)(effect@3.19.17)':
     dependencies:
-      '@effect/platform': 0.94.0(effect@3.19.17)
+      '@effect/platform': 0.94.5(effect@3.19.17)
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/resources': 2.5.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-logs': 0.212.0(@opentelemetry/api@1.9.0)
@@ -2649,7 +2661,7 @@ snapshots:
       '@opentelemetry/semantic-conventions': 1.39.0
       effect: 3.19.17
 
-  '@effect/platform@0.94.0(effect@3.19.17)':
+  '@effect/platform@0.94.5(effect@3.19.17)':
     dependencies:
       effect: 3.19.17
       find-my-way-ts: 0.1.6

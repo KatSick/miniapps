@@ -1,4 +1,7 @@
 $schema: ./cache/schemas/workspace.json
+generator:
+  templates:
+    - ./templates
 projects:
   - apps/*
   - packages/*

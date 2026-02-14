@@ -9,7 +9,7 @@
 ## Run development
 
 1. Run: `proto use`
-2. Run: `moon :dev` for dev server
+2. Run: `moonx :dev` for dev server
 
 ## To run (and see) OTEL
 

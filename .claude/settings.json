@@ -4,10 +4,15 @@
     "commit-commands@claude-plugins-official": true
   },
   "hooks": {
-    "postToolUse": [
+    "PostToolUse": [
       {
         "matcher": "Edit|Write",
-        "command": "pnpm exec oxfmt $CLAUDE_FILE_PATH 2>/dev/null || true"
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pnpm exec oxfmt --no-error-on-unmatched-pattern $CLAUDE_FILE_PATH 2>/dev/null || true"
+          }
+        ]
       }
     ]
   }

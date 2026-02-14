@@ -4,9 +4,14 @@ tasks:
     args: --ignore-pattern 'templates/**'
     options:
       mergeArgs: prepend
+  lint.fix:
+    args: --ignore-pattern 'templates/**'
+    options:
+      mergeArgs: prepend
   fmt:
     command: oxfmt --check .
   fmt.fix:
     command: oxfmt --write .
     options:
       runInCI: false
+      cache: false

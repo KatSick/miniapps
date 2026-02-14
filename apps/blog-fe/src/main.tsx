@@ -1,6 +1,6 @@
 import "./index.css";
 
-import { initTracing } from "@miniapps/telemetry";
+import { initTracing } from "@miniapps/telemetry/browser";
 import { createRoot } from "react-dom/client";
 
 import { name, version } from "@/package.json";

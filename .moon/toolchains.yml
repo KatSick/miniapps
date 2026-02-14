@@ -1,14 +1,10 @@
-$schema: "./cache/schemas/toolchain.json"
-
-unstable_javascript:
-  packageManager: "pnpm"
+$schema: ./cache/schemas/toolchains.json
+javascript:
+  packageManager: pnpm
   dedupeOnLockfileChange: false
   syncProjectWorkspaceDependencies: true
-
-unstable_node: {}
-
-unstable_pnpm: {}
-
+node: {}
+pnpm: {}
 typescript:
   syncProjectReferences: true
   routeOutDirToCache: true

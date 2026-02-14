@@ -1,41 +1,40 @@
-$schema: "./cache/schemas/tasks.json"
-
+$schema: ./cache/schemas/tasks.json
 tasks:
   build:
-    command: "vite build"
+    command: vite build
     inputs:
       - "@group(vite)"
       - "@group(sources)"
     outputs:
-      - "dist"
+      - dist
     deps:
-      - "lint"
-      - "types"
-      - "^:build"
-
+      - lint
+      - types
+      - ^:build
   mkcert.install:
-    command: "mkcert -install"
-    local: true
-
+    command: mkcert -install
+    options:
+      runInCI: false
   mkcert:
-    command: "mkcert -key-file localhost.key -cert-file localhost.pem $DOMAIN_NAME"
+    command: mkcert -key-file localhost.key -cert-file localhost.pem $DOMAIN_NAME
     outputs:
-      - "localhost.key"
-      - "localhost.pem"
+      - localhost.key
+      - localhost.pem
     deps:
-      - "mkcert.install"
-    local: true
-
+      - mkcert.install
+    options:
+      runInCI: false
   caddy:
-    command: "caddy run --config Caddyfile.local --watch"
-    preset: "server"
+    command: caddy run --config Caddyfile.local --watch
+    preset: server
     deps:
-      - "mkcert"
-
+      - mkcert
   dev:
-    command: "vite dev"
-    preset: "server"
+    command: vite dev
+    preset: server
     deps:
-      - "caddy"
-      - "^:build"
-      - "^:watch"
+      - caddy
+      - ^:build
+      - ^:watch
+inheritedBy:
+  tag: vite

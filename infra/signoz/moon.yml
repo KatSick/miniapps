@@ -1,9 +1,8 @@
 dependsOn:
   - traefik
-
 tasks:
   infra:
-    command: "cd docker && docker compose up --build"
-    preset: "server"
     deps:
       - traefik:infra
+    preset: server
+    script: cd docker && docker compose up --build

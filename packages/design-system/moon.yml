@@ -1,3 +1,6 @@
-language: "typescript"
-type: "library"
-tags: ["tsdown", "storybook", "vitest"]
+language: typescript
+tags:
+  - tsdown
+  - storybook
+  - vitest
+layer: library

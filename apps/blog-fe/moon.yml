@@ -1,20 +1,18 @@
-language: "typescript"
-type: "application"
-tags: ["vite"]
-
-dependsOn:
-  - design-system
-  - signoz
-  - traefik
-
-env:
-  DOMAIN_NAME: "blog-fe.localhost"
-
+language: typescript
 tasks:
   preview:
-    command: "docker compose up --build"
-    preset: "server"
+    command: docker compose up --build
+    preset: server
     deps:
       - build
       - traefik:infra
       - signoz:infra
+tags:
+  - vite
+dependsOn:
+  - design-system
+  - signoz
+  - traefik
+env:
+  DOMAIN_NAME: blog-fe.localhost
+layer: application

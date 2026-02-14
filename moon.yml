@@ -1,7 +1,7 @@
 tasks:
   fmt:
-    command: "oxfmt --check ."
-
+    command: oxfmt --check .
   fmt.fix:
-    command: "oxfmt --write ."
-    local: true
+    command: oxfmt --write .
+    options:
+      runInCI: false

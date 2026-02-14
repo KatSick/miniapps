@@ -1,6 +1,6 @@
 ## Create a PR from current changes
 
-1. Create a new git worktree: `git worktree add ../worktree-<branch> -b <branch>`
+1. Create a new git worktree: `git worktree add ./worktrees/worktree-<branch> -b <branch>`
 2. Copy changed files to the worktree (use specific paths, NEVER `git add -A`)
 3. Commit with meaningful message (NEVER use --no-verify)
 4. Push the branch

@@ -7,7 +7,7 @@
     "postToolUse": [
       {
         "matcher": "Edit|Write",
-        "command": "pnpm exec oxlint --fix $CLAUDE_FILE_PATH 2>/dev/null || true"
+        "command": "pnpm exec oxfmt $CLAUDE_FILE_PATH 2>/dev/null || true"
       }
     ]
   }

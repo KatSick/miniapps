@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.options.json",
   "compilerOptions": {
+    "resolveJsonModule": true,
     "paths": {
       "@/*": ["./src/*"],
       "@/package.json": ["./package.json"]
@@ -12,10 +13,13 @@
       }
     ]
   },
-  "include": ["src", "tests"],
+  "include": ["src", "tests", "package.json"],
   "references": [
     {
       "path": "../../packages/blog-api-contracts"
+    },
+    {
+      "path": "../../packages/telemetry"
     }
   ]
 }

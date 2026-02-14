@@ -7,6 +7,7 @@
     "@effect/platform": "catalog:",
     "@effect/platform-node": "catalog:",
     "@miniapps/blog-api-contracts": "workspace:*",
+    "@miniapps/telemetry": "workspace:*",
     "effect": "catalog:"
   },
   "devDependencies": {

@@ -34,12 +34,14 @@ const Button = ({
   className,
   variant,
   size,
-  asChild = false,
+  asChild,
   ...props
-}: ComponentProps<"button"> &
-  VariantProps<typeof buttonVariants> & {
-    asChild?: boolean;
-  }): ReactElement => {
+}: Readonly<
+  ComponentProps<"button"> &
+    VariantProps<typeof buttonVariants> & {
+      asChild?: boolean;
+    }
+>): ReactElement => {
   const Comp = asChild ? Slot : "button";
 
   return (

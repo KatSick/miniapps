@@ -31,15 +31,15 @@ type HeadingProps = Omit<ComponentProps<"h1">, "children"> &
 const Heading = ({
   children,
   className,
-  level = 1,
-  showPrompt = true,
+  level,
+  showPrompt,
   ...props
-}: HeadingProps): ReactElement => {
-  const Tag = `h${level}` as const;
+}: Readonly<HeadingProps>): ReactElement => {
+  const Tag = `h${level ?? 1}` as const;
 
   return (
     <Tag
-      className={cn(headingVariants({ level }), showPrompt && "prompt-prefix", className)}
+      className={cn(headingVariants({ level }), (showPrompt ?? true) && "prompt-prefix", className)}
       {...props}
     >
       {children}

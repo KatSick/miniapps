@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 type CodeProps = ComponentProps<"code">;
 
-const Code = ({ children, className, ...props }: CodeProps): ReactElement => (
+const Code = ({ children, className, ...props }: Readonly<CodeProps>): ReactElement => (
   <code
     className={cn(
       "rounded-sm border border-border bg-surface px-1.5 py-0.5 font-mono text-sm",
@@ -20,7 +20,7 @@ type CodeBlockProps = ComponentProps<"pre"> & {
   filename?: string;
 };
 
-const CodeBlock = ({ children, className, filename, ...props }: CodeBlockProps): ReactElement => (
+const CodeBlock = ({ children, className, filename, ...props }: Readonly<CodeBlockProps>): ReactElement => (
   <div className="overflow-hidden rounded-md border border-border">
     {typeof filename === "string" && filename.length > 0 && (
       <div className="border-b border-border bg-surface-raised px-4 py-2">

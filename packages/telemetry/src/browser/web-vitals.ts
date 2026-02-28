@@ -10,7 +10,7 @@ const fcpMetric = Metric.histogram("fcp", MetricBoundaries.fromIterable([0, 1800
 
 const clsMetric = Metric.gauge("cls");
 
-const reportMetric = Effect.fn("reportMetric")(function* reportMetric(metric: WebVitalMetric) {
+const reportMetric = Effect.fn("reportMetric")(function* reportMetric(metric: Readonly<WebVitalMetric>) {
   yield* Match.value(metric.name).pipe(
     Match.when("LCP", () => lcpMetric(Effect.succeed(metric.value))),
     Match.when("INP", () => inpMetric(Effect.succeed(metric.value))),
@@ -22,10 +22,10 @@ const reportMetric = Effect.fn("reportMetric")(function* reportMetric(metric: We
 });
 
 const createWebVitalEffect = (
-  callback: (onReport: (metric: WebVitalMetric) => void) => void,
+  callback: (onReport: (metric: Readonly<WebVitalMetric>) => void) => void,
 ): Effect.Effect<void> =>
   Effect.async((resume) => {
-    callback((value) => {
+    callback((value: Readonly<WebVitalMetric>) => {
       resume(reportMetric(value));
     });
   });

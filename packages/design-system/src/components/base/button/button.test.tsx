@@ -4,7 +4,7 @@ import { render } from "vitest-browser-react";
 import { Button } from "./button";
 
 test("button", async () => {
-  const click = vi.fn();
+  const click = vi.fn<() => void>();
   const { getByRole } = await render(<Button onClick={click}>Vitest</Button>);
   const buttonElement = getByRole("button");
 

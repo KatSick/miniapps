@@ -34,7 +34,7 @@ interface OtlpConfig {
   spanProcessor: SpanProcessor;
 }
 
-const createOtlpConfig = (config: TelemetryConfig): OtlpConfig => {
+const createOtlpConfig = (config: Readonly<TelemetryConfig>): OtlpConfig => {
   const endpoint = config.endpoint ?? DEFAULT_ENDPOINT;
   const metricIntervalMs = config.metricIntervalMs ?? DEFAULT_METRIC_INTERVAL_MS;
   const environment = config.environment ?? DEFAULT_ENVIRONMENT;

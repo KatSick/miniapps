@@ -29,17 +29,21 @@ type TextProps = ComponentProps<"p"> &
   };
 
 const Text = ({
-  as: Tag = "p",
+  as,
   children,
   className,
   size,
   variant,
   ...props
-}: TextProps): ReactElement => (
-  <Tag className={cn(textVariants({ size, variant }), className)} {...props}>
-    {children}
-  </Tag>
-);
+}: Readonly<TextProps>): ReactElement => {
+  const Tag = as ?? "p";
+
+  return (
+    <Tag className={cn(textVariants({ size, variant }), className)} {...props}>
+      {children}
+    </Tag>
+  );
+};
 
 export { Text, textVariants };
 export type { TextProps };

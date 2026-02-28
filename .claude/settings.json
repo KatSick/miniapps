@@ -10,11 +10,11 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 .claude/hooks/prevent-npm.py"
+            "command": "node .claude/hooks/prevent-npm.mjs"
           },
           {
             "type": "command",
-            "command": "python3 .claude/hooks/prevent-bad-git.py"
+            "command": "node .claude/hooks/prevent-bad-git.mjs"
           }
         ]
       }

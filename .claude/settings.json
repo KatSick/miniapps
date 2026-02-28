@@ -4,6 +4,21 @@
     "commit-commands@claude-plugins-official": true
   },
   "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/prevent-npm.py"
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/prevent-bad-git.py"
+          }
+        ]
+      }
+    ],
     "PostToolUse": [
       {
         "matcher": "Edit|Write",

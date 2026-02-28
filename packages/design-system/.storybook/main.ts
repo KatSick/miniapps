@@ -11,10 +11,10 @@ const config: StorybookConfig = {
   },
   framework: "@storybook/react-vite",
   stories: ["../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
-  async viteFinal(config) {
+  async viteFinal(viteConfig) {
     const { mergeConfig } = await import("vite");
 
-    return mergeConfig(config, {
+    return mergeConfig(viteConfig, {
       plugins: [tailwindcss(), tsconfigPaths()],
     });
   },

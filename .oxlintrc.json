@@ -32,7 +32,11 @@
     "no-ternary": "off",
     "import/no-unassigned-import": "off",
     "import/no-absolute-path": "off",
-    "no-void": "off"
+    "no-void": "off",
+    "vitest/no-importing-vitest-globals": "off",
+    "typescript/prefer-readonly-parameter-types": "off",
+    "typescript/no-useless-default-assignment": "off",
+    "typescript/strict-void-return": "off"
   },
   "settings": {},
   "env": {

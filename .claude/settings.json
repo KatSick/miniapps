@@ -4,6 +4,31 @@
     "commit-commands@claude-plugins-official": true
   },
   "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "proto use && moon sync projects && pnpm install"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/prevent-npm.mjs"
+          },
+          {
+            "type": "command",
+            "command": "node .claude/hooks/prevent-bad-git.mjs"
+          }
+        ]
+      }
+    ],
     "PostToolUse": [
       {
         "matcher": "Edit|Write",
